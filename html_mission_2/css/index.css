@@ -1,0 +1,136 @@
+body {
+	background-color: #ECECEC;
+	margin: 0;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+header {
+	background: black;
+	color:white;
+	height: 60px;
+}
+
+header h1 {
+	float: left;
+	line-height: 60px;
+	margin:0;
+	margin-left: 40px;
+}
+
+header ul {
+	float: right;
+	margin:0px;
+	padding:0px;
+}
+header li {
+	float: left;
+	margin-right: 20px;
+	line-height: 60px;
+	list-style-type: none;
+}
+
+
+header li a {
+	color:white;
+	text-decoration: none;
+}
+
+article {
+	margin:20px;
+	margin-bottom:0;
+	background-color: white;
+	padding: 40px 20px;
+	box-shadow:2px 2px 2px #818181;
+}
+
+article h2 {
+	margin-top:0;
+	font-size: 22px;
+}
+
+article h3 {
+	margin-top: 0;
+	color: #A19DAF;
+	font-size: 16px;
+}
+
+article h5 {
+	color: #A19DAF;
+	font-size: 12px;
+}
+figure {
+	border: 1px solid black;
+	width: 300px;
+	/*height:300px;*/
+	text-align: center;
+	padding:10px;
+}
+figure figcaption{
+	margin-bottom: 10px;
+}
+figure img {
+	/*margin-bottom:20px;*/
+}
+
+table {
+	border: 1px solid #CACACA;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+
+}
+table thead {
+	background-color: #343434;
+	color: white;
+}
+table tfoot {
+	background-color: #CACACA;
+}
+
+
+.message {
+	width:30%;
+	margin-right: 10px;
+	margin-top: 10px;
+	display: inline-block;
+	text-align: right;
+	/*vertical-align: top;*/
+}
+.note {
+	margin-left: calc(30% + 10px);
+	margin-top: 10px;
+	font-size: 0.9em;
+	color: #ADA99E;
+}
+
+textarea {
+	height:100px;
+	width: 50%;
+	vertical-align: top;
+	margin-top:10px;
+}
+
+.submit {
+	margin-top: 10px;
+	width:100%;
+	height: 40px;
+	background-color: #4043CD;
+	border-radius: 2px;
+	border: 0;
+	border-radius: 8px;
+	color: white;
+}
+
+footer {
+	background-color: black;
+	height:80px;
+	margin-top: 20px;
+	color: white;
+	text-align: center;
+	line-height:80px;
+}
+
+#aside-title {
+	padding-left: 10px;
+	border-left: 4px solid #CDCDCD;
+}
