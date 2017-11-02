@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 20px;
+	font-size: 12px;
+	text-align: justify;
+	min-width: 600px;
+}
+
+div, article {
+	background-color: #EDEDED;
+	border:1px solid #969696;
+	overflow: auto;
+	padding: 20px;
+}
+
+#term {
+	float: left;
+	width: 200px;
+	background-color: white;
+}
+
+#term span {
+	vertical-align: top;
+	margin-left: 20px;
+}
+
+figure {
+	/*float: left;*/
+
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	/*margin-top:20px;*/
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	border:1px solid #969696;
+}
+
+figure:first-child {
+	margin-top: 0;
+}
+
+figure img {
+	min-width: 80px;
+	min-height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#gallery {
+	float: right;
+	width: 120px;
+	background-color: white;
+	font-size: 0;
+	/*overflow: hidden;*/
+}
+
+#introduction {
+	margin-left:  220px;
+	margin-right: 140px;
+	background-color: white;
+}
