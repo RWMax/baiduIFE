@@ -2,7 +2,7 @@
 
 [作业预览](mission_preview.md)
 
-[知识点](knowledge.md)
+[学习笔记](knowledge.md)
 
 
 ### 课程链接
