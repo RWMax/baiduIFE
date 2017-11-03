@@ -10,10 +10,16 @@ body {
 	min-width: 600px;
 }
 
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 div, article {
+	/*overflow: auto;*/
 	background-color: #EDEDED;
 	border:1px solid #969696;
-	overflow: auto;
 	padding: 20px;
 }
 
@@ -30,16 +36,15 @@ div, article {
 
 figure {
 	/*float: left;*/
-
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	/*margin-top:20px;*/
+	margin-top:20px;
+	overflow: hidden;
 	width: 80px;
 	height: 80px;
-	overflow: hidden;
 	position: relative;
-	border:1px solid #969696;
+	border: 1px solid #969696;
 }
 
 figure:first-child {
@@ -47,20 +52,20 @@ figure:first-child {
 }
 
 figure img {
-	min-width: 80px;
-	min-height: 80px;
-	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	min-width: 80px;
+	min-height: 80px;
+	position: absolute;
 }
 
 #gallery {
 	float: right;
-	width: 120px;
+	/*overflow: hidden;*/
+	width: 122px;
 	background-color: white;
 	font-size: 0;
-	/*overflow: hidden;*/
 }
 
 #introduction {

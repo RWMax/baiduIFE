@@ -186,8 +186,35 @@ overflow-y
 	box-shadow: 2px 2px 2px black;
 
 [text-align: center | justify](http://www.w3school.com.cn/cssref/pr_text_text-align.asp)
+
 	行内元素对齐方式
 	justify 两端对齐
 
-
 ### xiaowei_mission_3 任务三：三栏式布局
+
+[position: absolute](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
+
+	注意:在绝对定位中,当top和bottom冲突,优先采用top.
+	left和right冲突,优先采用right
+
+	element {height:10;top:0;bottom:0}
+	如上,尽管 bottom在 top 后,但依然采用 top
+
+[box-sizing: border-box;](https://www.w3schools.com/cssref/css3_pr_box-sizing.asp)
+	定义 width 的计算方式
+	border-box 包含 border
+	content-box 默认值
+	无继承
+
+[清除浮动](https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use)
+
+	方法一 
+	{overflow: auto;}
+	方法二 
+	.container::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+### xiaowei_mission_4 任务四：定位和居中问题
