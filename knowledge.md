@@ -6,9 +6,9 @@
 	2 bfc 设计模式
 	3 box-sizing:border-box chrome与其他浏览器的显示区别
 
-### html_mission_l 零基础HTML编码
+## xiaowei_mission_l 零基础HTML编码
 
-[ul ol](https://www.w3schools.com/html/html_lists.asp)
+[<ul> <ol>](https://www.w3schools.com/html/html_lists.asp)
 
 	无序列表 ul
 	有序列表 ol
@@ -25,7 +25,7 @@
 		</dl>
 	list-style-type:none | disc ...
 	type="1 | a | A" ...
-[a](https://www.w3schools.com/html/html_links.asp)
+[<a>](https://www.w3schools.com/html/html_links.asp)
 
 	<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
 	target = "_blank" 在新页打开
@@ -33,13 +33,13 @@
 
 	<div id="a"></div>
 	<a href="#a">跳转到id为a的元素</a>
-[img](https://www.w3schools.com/html/html_images.asp)
+[<img>](https://www.w3schools.com/html/html_images.asp)
 
 	<img src="" alt= "">
 	src 图片链接
 	alt 文字,加载失败时显示
 
-[picture](http://www.w3cplus.com/html5/quick-tip-how-to-use-html5-picture-for-responsive-images.html) (html5)
+[<picture>](http://www.w3cplus.com/html5/quick-tip-how-to-use-html5-picture-for-responsive-images.html) (html5)
 
 	指定不同条件下,显示不同图像
 	<picture>
@@ -48,49 +48,49 @@
 	</picture>
 	当窗口宽度小于100px时,显示 smaller.jpg
 
-[figure figcaption](http://www.w3school.com.cn/tags/tag_figure.asp)
+[<figure> <figcaption>](http://www.w3school.com.cn/tags/tag_figure.asp)
 
-[span]()
+[<span>]()
 
-[time]()
+[<time>]()
 
-[table thead tbody tfoot tr th td](http://www.w3school.com.cn/tags/tag_table.asp)
+[<table> <thead> <tbody> <tfoot> <tr> <th> <td>](http://www.w3school.com.cn/tags/tag_table.asp)
 
 table,tr,th,... {border: 0} 边框宽度,为0时无边框
 
-[form cn](https://www.w3schools.com/tags/tag_form.asp)
-[form en](https://www.w3schools.com/html/html_forms.asp)
+[<form> cn](https://www.w3schools.com/tags/tag_form.asp)
+[<form> en](https://www.w3schools.com/html/html_forms.asp)
 
 	<form action="地址" method="post"></form>
 
-[input](http://www.w3school.com.cn/tags/tag_input.asp)
+[<input>](http://www.w3school.com.cn/tags/tag_input.asp)
 
 	<input type="radio" id="" value="" checked="checked" name="">
 	type = "text | radio | password | submit | checkbox | email"
 	name input元素名称
 
-[maxlength minlength](http://www.w3school.com.cn/tags/att_input_maxlength.asp)
+[<maxlength> <minlength>](http://www.w3school.com.cn/tags/att_input_maxlength.asp)
 
 	允许输入的最大|最小字符个数
 
-[pattern](http://www.w3school.com.cn/tags/att_input_pattern.asp)
+[<pattern>](http://www.w3school.com.cn/tags/att_input_pattern.asp)
 
 	<input type="text" pattern="[0-9]{3,10}">
 	允许输入字符格式,接受正则
 
-[placeholder](http://www.w3school.com.cn/tags/att_input_placeholder.asp)
+[<placeholder>](http://www.w3school.com.cn/tags/att_input_placeholder.asp)
 
 	<input type="text" placeholder="这是一个输入框">
 	输入框为空时显示,获得焦点是自动消失
 
-[label](http://www.w3school.com.cn/tags/tag_label.asp)
+[<label>](http://www.w3school.com.cn/tags/tag_label.asp)
 
 	<label for="#id"></label>
 	<label><input type="" name=""></label>
 
-[for](http://www.w3school.com.cn/tags/att_label_for.asp)
+[<for>](http://www.w3school.com.cn/tags/att_label_for.asp)
 
-[select 复选框]()
+[<select> 复选框]()
 
 	<select>
 		<option selected="selected">1</option>
@@ -118,12 +118,10 @@ html5 标签
 	<figure>
 	<figcaption>
 
-## html_mission_2 零基础HTML及CSS编码（一）
+## xiaowei_mission_2 零基础HTML及CSS编码（一）
 载入css样式文件
 
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-
-### css
 
 [font-family:](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
 
@@ -199,7 +197,7 @@ overflow-y
 	行内元素对齐方式
 	justify 两端对齐
 
-### xiaowei_mission_3 任务三：三栏式布局
+## xiaowei_mission_3 任务三：三栏式布局
 
 [position: absolute](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
 
@@ -235,8 +233,7 @@ opacity: 0.5 透明度
 	控制元素堆叠顺序,数值大的在上面
 	当 position: absolute | relative | fixed 时,z-index生效(top...等也一样)
 
-### 居中
-https://css-tricks.com/centering-css-complete-guide/
+### [居中](https://css-tricks.com/centering-css-complete-guide/)
 
 #### 水平居中
 
@@ -311,7 +308,7 @@ https://www.zhihu.com/question/35113393
 		right:0;
 		margin: auto;	
 
-### [清除inline-black元素间的缝隙](https://www.zhihu.com/question/21468450)
+[清除inline-black元素间的缝隙](https://www.zhihu.com/question/21468450)
 
 	设置容器字体大小为0,在子元素里改回来
 	.container {font-size:0;}
@@ -330,6 +327,7 @@ BFC 模式
 	需设置overflow: auto | hidden | scroll 才能生效
 
 [margin: auto | 10 | -10]()
+
 margin-top
 margin-bottom
 margin-left
@@ -351,4 +349,11 @@ ul | ol 居中
 	text-align:center 无法使列表居中
 	ul, ol{margin: 0 auto;width:100px;}
 
-@media screen and (min-width:)
+@media screen and | not| only (条件){}
+	
+	当屏幕尺寸小于700px
+	@media screen and (max-width:700px){}
+	当屏幕尺寸小于1200px大于700px
+	@media screen and (mix-width:701px) and (max-width: 1200px){}
+
+[两栏 三栏布局](http://ife.baidu.com/note/detail/id/666)

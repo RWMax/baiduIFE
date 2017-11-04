@@ -3,8 +3,7 @@ body {
 	background-color: #ECECEC;
 	font-size: 14px;
 	font-family: "Microsoft YaHei";
-	width:100%;
-	min-width: 400px;
+	min-width: 500px;
 }
 
 header {
@@ -45,7 +44,7 @@ header li a {
 	text-decoration: none;
 }
 
-article,aside {
+article {
 	margin: 20px;
 	margin-bottom: 0;
 	background-color: white;
@@ -148,45 +147,4 @@ footer span {
 #aside-title {
 	padding-left: 10px;
 	border-left: 4px solid #CDCDCD;
-}
-
-/*2017/11/4*/
-img {
-	width: 100%;
-}
-
-figure {
-	vertical-align: middle;
-	display: inline-block;
-
-	width: 200px;
-	height:200px;
-	margin: 10px;
-	position: relative;
-}
-figure img {
-	width:calc(100% - 20px);
-	position: absolute;
-	top:50%;
-	left:50%;
-	transform: translate(-50%, -50%);
-}
-
-
-@media screen and (min-width: 700px){
-	article {
-		margin-right: calc(380px + 40px);
-	}
-
-	aside {
-		width:340px;
-		float:right;
-		position: absolute;
-		top: 60px;
-		right:0px;
-	}
-
-	img {
-		width:30%;
-	}
 }
