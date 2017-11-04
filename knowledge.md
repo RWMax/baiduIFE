@@ -218,3 +218,55 @@ overflow-y
 	}
 
 ### xiaowei_mission_4 任务四：定位和居中问题
+
+opacity: 0.5 透明度
+
+[z-index: 1 | 2 ...]()
+	
+	控制元素堆叠顺序,数值大的在上面
+	当 position: absolute | relative | fixed 时,z-index生效(top...等也一样)
+
+居中
+	行内元素
+	text-align: center;
+	块元素
+	margin: 0 auto;
+	多个块元素
+	display: inline-block;text-align:center;
+
+
+垂直居中
+	行内元素
+	padding-top:30px;
+	padding-bottom:30px;
+
+	height:100px;
+	line-height:100px;
+
+	行内元素 多行
+	.parent{display:table;vertical-align:middle;}
+	.element{display:table-cell;vertical-align:middle;}
+	
+	flex
+	
+
+	.parent::before {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		wertical-align: middle;
+	}
+	.element {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	块状元素
+	display:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+
+
+[white-space: nowrap](http://www.w3school.com.cn/cssref/pr_text_white-space.asp)
+
+	nowrap 禁止换行
