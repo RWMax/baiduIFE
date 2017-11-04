@@ -235,16 +235,19 @@ opacity: 0.5 透明度
 	控制元素堆叠顺序,数值大的在上面
 	当 position: absolute | relative | fixed 时,z-index生效(top...等也一样)
 
-#### 居中
+### 居中
 https://css-tricks.com/centering-css-complete-guide/
 
-水平居中
+#### 水平居中
 
 	行内元素
+
 	text-align: center;
 	块元素
 	margin: 0 auto;
-	多个块状元素
+
+- 多个块状元素
+
 	.parent{display: inline-block;}
 	.ele{text-align:center;}	
 	
@@ -253,9 +256,10 @@ https://css-tricks.com/centering-css-complete-guide/
 		justify-content: center;
 	}
 
-### 垂直居中
+#### 垂直居中
 
 - 行内元素 单行
+
 	padding-top:30px;
 	padding-bottom:30px;
 
@@ -263,6 +267,7 @@ https://css-tricks.com/centering-css-complete-guide/
 	line-height:100px;
 
 - 行内元素 多行
+
 	.parent{display:table;vertical-align:middle;}
 	.element{display:table-cell;vertical-align:middle;}
 
@@ -281,12 +286,14 @@ https://css-tricks.com/centering-css-complete-guide/
 注意: inline-block模式 会在元素间产生缝隙,当元素宽度为100%时,会被挤下去(尽管::before宽度设置为0)
 
 - 块状元素 高度已知
+
 	position: absolute;
 	top: 50%;
 	height: 100px;
 	margin-top: -50px;
 	
 - 块状元素 未知高度
+
 	display:absolute;
 	top: 50%;
 	left: 50%;
@@ -294,6 +301,7 @@ https://css-tricks.com/centering-css-complete-guide/
 注:absolute会导致 margin: auto 失效,用{left: 50%; transform: translateX(-50%);} 水平居中
 	 
 - 高度不为auto,无margin 块状元素
+
 https://www.zhihu.com/question/35113393
 	display:absolute;
 	top:0;

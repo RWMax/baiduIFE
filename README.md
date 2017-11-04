@@ -16,4 +16,4 @@
 
 [xiaowei_mission_4 任务四：定位和居中问题](http://ife.baidu.com/course/detail/id/95)
 
-[xiaowei_mission_5 任务五：零基础HTML及CSS编码（二](http://ife.baidu.com/course/detail/id/96)
+[xiaowei_mission_5 任务五：零基础HTML及CSS编码（二)](http://ife.baidu.com/course/detail/id/96)
