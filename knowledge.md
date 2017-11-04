@@ -242,19 +242,20 @@ https://css-tricks.com/centering-css-complete-guide/
 
 - 行内元素
 
-	text-align: center;
-	块元素
-	margin: 0 auto;
+		text-align: center;
+- 块状元素
+
+		margin: 0 auto;
 
 - 多个块状元素
 
-	.parent{display: inline-block;}
-	.ele{text-align:center;}	
-	
-	.parent{
-		display: flex;
-		justify-content: center;
-	}
+		.parent{display: inline-block;}
+		.ele{text-align:center;}	
+		
+		.parent{
+			display: flex;
+			justify-content: center;
+		}
 
 #### 垂直居中
 
@@ -287,11 +288,11 @@ https://css-tricks.com/centering-css-complete-guide/
 
 - 块状元素 高度已知
 
-	position: absolute;
-	top: 50%;
-	height: 100px;
-	margin-top: -50px;
-	
+		position: absolute;
+		top: 50%;
+		height: 100px;
+		margin-top: -50px;
+		
 - 块状元素 未知高度
 
 		display:absolute;
