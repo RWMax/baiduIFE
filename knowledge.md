@@ -1,5 +1,11 @@
 # 知识点
 
+### question
+
+	1 overflow 对兄弟元素间的影响
+	2 bfc 设计模式
+	3 box-sizing:border-box chrome与其他浏览器的显示区别
+
 ### html_mission_l 零基础HTML编码
 
 [ul ol](https://www.w3schools.com/html/html_lists.asp)
@@ -23,18 +29,19 @@
 
 	<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
 	target = "_blank" 在新页打开
-			 "_self" 在同一页打开
+             "_self" 在同一页打开
 
 	<div id="a"></div>
-	<a href="#a">跳到id为a的元素</a>
+	<a href="#a">跳转到id为a的元素</a>
 [img](https://www.w3schools.com/html/html_images.asp)
 
 	<img src="" alt= "">
 	src 图片链接
 	alt 文字,加载失败时显示
 
-[picture](http://www.w3cplus.com/html5/quick-tip-how-to-use-html5-picture-for-responsive-images.html) html5
+[picture](http://www.w3cplus.com/html5/quick-tip-how-to-use-html5-picture-for-responsive-images.html) (html5)
 
+	指定不同条件下,显示不同图像
 	<picture>
 	<source media="(max-width:100px)" srcset="smaller.jpg">
 	<img src="large.jpg">
@@ -49,13 +56,12 @@
 
 [table thead tbody tfoot tr th td](http://www.w3school.com.cn/tags/tag_table.asp)
 
-	border 边框宽度,为0时无边框
+table,tr,th,... {border: 0} 边框宽度,为0时无边框
 
 [form cn](https://www.w3schools.com/tags/tag_form.asp)
+[form en](https://www.w3schools.com/html/html_forms.asp)
 
 	<form action="地址" method="post"></form>
-
-[form en](https://www.w3schools.com/html/html_forms.asp)
 
 [input](http://www.w3school.com.cn/tags/tag_input.asp)
 
@@ -119,7 +125,7 @@ html5 标签
 
 ### css
 
-[font-family](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
+[font-family:](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
 
 	font-family: "Goudy Bookletter 1911", sans-serif;
 	"xxx" 具体的字体名,如 微软雅黑
@@ -128,6 +134,7 @@ html5 标签
 position:  | absolute | fixed
 
 	注意: absolute 会导致 margin: 0 auto; 失效
+
 [display: inline-block](http://zh-tw.learnlayout.com/inline-block.html)
 
 [vertical-align: top | bottom | middle](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align)
@@ -144,6 +151,7 @@ position:  | absolute | fixed
 	{clear: left} 清除所有拥有属性 float: left 的元素,即不允许元素左侧出现浮动元素
 
 [overflow: auto | visible | scroll | hiddle](http://zh-tw.learnlayout.com/clearfix.html)
+
 [深入理解overflow](http://www.cnblogs.com/xiaohuochai/p/5289653.html)
 [absolute属性导致容器overflow失效的解决办法](https://stackoverflow.com/questions/15438828/extending-position-absolute-div-outside-overflow-hidden-div)
 
@@ -236,20 +244,25 @@ https://css-tricks.com/centering-css-complete-guide/
 	text-align: center;
 	块元素
 	margin: 0 auto;
-	多个块元素
-	display: inline-block;text-align:center;
+	多个块状元素
+	.parent{display: inline-block;}
+	.ele{text-align:center;}	
+	
+	.parent{
+		display: flex;
+		justify-content: center;
+	}
 
+### 垂直居中
 
-垂直居中
-
-	行内元素 单行
+- 行内元素 单行
 	padding-top:30px;
 	padding-bottom:30px;
 
 	height:100px;
 	line-height:100px;
 
-	行内元素 多行
+- 行内元素 多行
 	.parent{display:table;vertical-align:middle;}
 	.element{display:table-cell;vertical-align:middle;}
 
@@ -265,23 +278,23 @@ https://css-tricks.com/centering-css-complete-guide/
 		vertical-align: middle;
 		width: calc()
 	}
-	注意: inline-block模式 会在元素间产生缝隙,当元素宽度为100%时,会被挤下去(尽管::before宽度设置为0)
+注意: inline-block模式 会在元素间产生缝隙,当元素宽度为100%时,会被挤下去(尽管::before宽度设置为0)
 
-	块状元素 高度已知
+- 块状元素 高度已知
 	position: absolute;
 	top: 50%;
 	height: 100px;
 	margin-top: -50px;
 	
-	块状元素 未知高度
+- 块状元素 未知高度
 	display:absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	注:absolute会导致 margin: auto 失效,用{left: 50%; transform: translateX(-50%);} 水平居中
-	
-	其他 https://www.zhihu.com/question/35113393
-	高度不为auto,无margin 块状元素
+注:absolute会导致 margin: auto 失效,用{left: 50%; transform: translateX(-50%);} 水平居中
+	 
+- 高度不为auto,无margin 块状元素
+https://www.zhihu.com/question/35113393
 	display:absolute;
 	top:0;
 	bottom:0;
@@ -289,7 +302,7 @@ https://css-tricks.com/centering-css-complete-guide/
 	right:0;
 	margin: auto;	
 
-[清除inline-black元素间的缝隙](https://www.zhihu.com/question/21468450)
+### [清除inline-black元素间的缝隙](https://www.zhihu.com/question/21468450)
 
 	设置容器字体大小为0,在子元素里改回来
 	.container {font-size:0;}
@@ -314,3 +327,19 @@ margin-left
 margin-right
 
 	margin属性值可以为负
+
+### xiaowei_mission_5 
+
+默认值
+margin:
+width | height: auto;
+float: none;
+overflow: visible;
+font-size: medium;
+
+ul | ol 居中
+
+	text-align:center 无法使列表居中
+	ul, ol{margin: 0 auto;width:100px;}
+
+@media screen and (min-width:)

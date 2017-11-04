@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html_mission_1</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<header>
+	<h1>李清照 词集</h1>
+	<ul>
+		<li><a href="#1">孤雁儿</a></li>
+		<li><a href="#2">满庭霜</a></li>
+		<li><a href="">玉楼春</a></li>
+		<li><a href="">渔家傲</a></li>
+	</ul>
+</header>
+<article>
+	<h2 id="1">孤雁儿</h2>
+	<p>
+		藤床纸帐朝眠起。说不尽、无佳思。沈香断续玉炉寒，伴我情怀如水。笛里三弄，梅心惊破，多少春情意。
+		<br> 
+		小风疏雨萧萧地。又催下、千行泪。吹箫人去玉楼空，肠断与谁同倚。一枝折得，人间天上，没个人堪寄。
+	</p>
+	<img src="./img/1.jpg" alt="scenes">
+	
+</article>
+<article>	
+	<h2 id="2">满庭霜</h2>
+	<p>
+		小阁藏春，闲窗锁昼，画堂无限深幽。篆香烧尽，<a href="#sky">日影</a>下帘钩。手种江梅更好，又何必、临水登楼。无人到，寂寥浑似，何逊在扬州。 
+		<br>
+		从来，知韵胜，难堪雨藉，不耐风柔。更谁家横笛，吹动浓愁。莫恨香消雪减，须信道、扫迹情留。难言处，良宵淡月，疏影尚风流。
+	</p>
+	<img src="./img/2.jpg" alt="scenes">
+</article>
+<article>	
+	<h2>景</h2>
+	<figure>
+		<figcaption id="sky">晴空</figcaption>
+		<img src="./img/3.jpg">
+	</figure>
+	<figure>
+		<figcaption>寂静</figcaption>
+		<img src="./img/4.jpg">
+	</figure>	<figure>
+		<figcaption>银沙</figcaption>
+		<img src="./img/5.jpg">
+	</figure>	
+</article>
+<article>	
+	<h2>最后一篇</h2>	
+	<h3>水果</h3>
+	<h5>
+		<span class="">作者:西瓜</span>
+		<span>发布时间:2017</span>
+	</h5>
+
+	<ol>
+		<li>西瓜</li>
+		<li>猕猴桃</li>
+		<li>葡萄</li>
+	</ol>
+
+	<p>
+		<span>购物清单</span>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>水果</th>
+					<th>蔬菜</th>
+					<th>调料</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>香蕉</td>
+					<td>白菜</td>
+					<td>花椒</td>
+				</tr>
+				<tr>
+					<td>荔枝</td>
+					<td>番茄</td>
+					<td>黄油</td>
+				</tr>
+				<tr>
+					<td>葡萄</td>
+					<td>冬瓜</td>
+					<td>芝麻</td>
+				</tr>
+				<tr>
+					<td>梨</td>
+					<td>冬笋</td>
+					<td>大蒜</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>总计</td>
+					<td colspan="2">1000</td>
+
+				</tr>
+			</tfoot>
+		</table>
+	</p>
+</article>
+<aside>
+	<div id="logon">
+		<h2 id="aside-title">账号管理</h2>
+		<h3>注册</h3>
+		<form action="/logon.php" mothod="post">
+			<div>
+				<div class="message">请输入邮箱地址</div>
+				<input type="email" name="email-address" placeholder="这是一个文本输入框">
+			</div>
+			<div class="note">邮箱地址请按要求格式输入</div>
+			<div>
+				<div class="message">请输入密码</div>
+				<input type="password" name="password" placeholder="这是一个文本输入框" maxlength="16" minlength="6" pattern="[0-9a-zA-Z]{6,16}">
+			</div>
+			<div>
+				<div class="message">重复输入密码</div>
+				<input type="password" name="password-again" placeholder="这是一个文本输入框" maxlength="16" minlength="6" pattern="[0-9a-zA-Z]{6,16}">
+			</div>
+			<div class="note">密码请为6-16位英文数字</div>
+			<div>
+				<div  class="message">性别</div>
+				<input type="radio" name="sex" id="man" value="man" checked="checked">
+				<label for="man" >男</label>
+				<input type="radio" name="sex" id="woman" value="woman">
+				<label for="woman">女</label>
+			</div>
+			<div>
+				<div class="message">城市</div>
+				<select>
+				<option value="beijing">北京</option>
+				<option value="shanghai">上海</option>
+				<option value="shenzhen">深圳</option>
+				</select>
+			</div>
+			<div>
+				<div class="message">爱好</div>
+				<input type="checkbox" name="love" id="sport" value="sport">
+				<label for="sport">运动</label>
+				<input type="checkbox" name="love" id="art" value="art">
+				<label for="art">艺术</label>	
+				<input type="checkbox" name="love" id="science" value="science">
+				<label for="science">科学</label>
+			</div>
+			<div>
+				<div class="message" id="">个人描述</div>	
+				<textarea placeholder="这是一个多行输入框,输入您的个人描述"></textarea>
+			</div>
+			<div>
+				<input class="submit" type="submit" name="" value="确认提交">
+			</div>
+		</form>
+	</div>
+</aside>
+<footer>
+	<span>版权所有&copy Aaron</span>
+</footer>
+</body>
+</html>

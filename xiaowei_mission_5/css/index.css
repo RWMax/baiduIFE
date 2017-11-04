@@ -1,0 +1,191 @@
+body {
+	margin: 0;
+	background-color: #ECECEC;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	width:100%;
+	min-width: 400px;
+}
+
+header {
+	height: 60px;
+	background: black;
+	color:white;
+	position: relative;
+
+}
+
+header h1 {
+	float: left;
+	line-height: 60px;
+/*	line-height: 1em;
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);*/
+	margin:0;
+	margin-left: 40px;
+}
+
+header ul {
+	float: right;
+	margin:0px;
+	padding:0px;
+}
+
+header li {
+	float: left;
+	margin-right: 20px;
+	line-height: 60px;
+	list-style-type: none;
+}
+
+
+header li a {
+	color: white;
+	text-decoration: none;
+}
+
+article,aside {
+	margin: 20px;
+	margin-bottom: 0;
+	background-color: white;
+	padding: 40px 20px;
+	box-shadow: 2px 2px 2px #818181;
+}
+
+article h2 {
+	margin-top: 0;
+	font-size: 22px;
+}
+
+article h3 {
+	margin-top: 0;
+	color: #A19DAF;
+	font-size: 16px;
+}
+
+article h5 {
+	color: #A19DAF;
+	font-size: 12px;
+}
+
+figure {
+	padding: 10px;
+	width: 300px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+figure figcaption{
+	margin-bottom: 10px;
+}
+
+table {
+	width: 100%;
+	border: 1px solid #CACACA;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table thead {
+	background-color: #343434;
+	color: white;
+}
+
+table tfoot {
+	background-color: #CACACA;
+}
+
+.message {
+	display: inline-block;
+	text-align: right;
+	width: 30%;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.note {
+	margin-left: calc(30% + 10px);
+	margin-top: 10px;
+	font-size: 0.9em;
+	color: #ADA99E;
+}
+
+textarea {
+	height: 100px;
+	width: 50%;
+	vertical-align: top;
+	margin-top: 10px;
+}
+
+.submit {
+	margin-top: 10px;
+	width: 100%;
+	height: 40px;
+	background-color: #4043CD;
+	border: 0;
+	border-radius: 8px;
+	color: white;
+}
+
+footer {
+	margin-top: 20px;
+	height: 80px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	/*line-height: 80px;*/
+	display:table;
+	width:100%;
+	vertical-align: middle;
+}
+
+footer span {
+	display:table-cell;
+	vertical-align: middle;
+}
+
+#aside-title {
+	padding-left: 10px;
+	border-left: 4px solid #CDCDCD;
+}
+
+/*2017/11/4*/
+img {
+	width: 100%;
+}
+
+figure {
+	vertical-align: middle;
+	display: inline-block;
+
+	width: 200px;
+	height:200px;
+	margin: 10px;
+	position: relative;
+}
+figure img {
+	width:calc(100% - 20px);
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 700px){
+	article {
+		margin-right: calc(360px + 40px);
+	}
+
+	aside {
+		width:320px;
+		float:right;
+		position: absolute;
+		top: 60px;
+		right:0px;
+	}
+
+	img {
+		width:30%;
+	}
+}
