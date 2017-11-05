@@ -357,3 +357,5 @@ ul | ol 居中
 	@media screen and (mix-width:701px) and (max-width: 1200px){}
 
 [两栏 三栏布局](http://ife.baidu.com/note/detail/id/666)
+
+## xiaowei_mission_6 任务六：通过HTML及CSS模拟报纸排版
