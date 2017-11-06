@@ -17,10 +17,10 @@ body {
 }
 
 div, article {
-	/*overflow: auto;*/
 	background-color: #EDEDED;
 	border:1px solid #969696;
 	padding: 20px;
+	/*overflow: auto;*/
 }
 
 #term {
@@ -35,7 +35,6 @@ div, article {
 }
 
 figure {
-	/*float: left;*/
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -62,7 +61,7 @@ figure img {
 
 #gallery {
 	float: right;
-	/*overflow: hidden;*/
+/*	overflow: hidden;*/
 	width: 122px;
 	background-color: white;
 	font-size: 0;

@@ -63,7 +63,7 @@ header>span {
 	margin: 0;
 	width: 641px;
 	height: 301px;
-	background-color: black;
+	/*background-color: black;*/
 	position: relative;
 	overflow: hidden;
 	font-size: 0;

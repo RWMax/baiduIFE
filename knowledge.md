@@ -1,10 +1,12 @@
-# 知识点
+# bnote
 
 ### question
 
 	1 overflow 对兄弟元素间的影响
 	2 bfc 设计模式
 	3 box-sizing:border-box chrome与其他浏览器的显示区别
+### todo
+	xiaowei_mission_6 兼容ie
 
 ### html_mission_l 零基础HTML编码
 
@@ -12,19 +14,22 @@
 
 	无序列表 ul
 	有序列表 ol
-	格式 
-		<ul style="list-style-type:none;">
-			<li></li>
-		</ul>
-		<ol type="A">
-			<li></li>
-		</ol>
-		<dl>
-			<dt>名称</dt>
-			<dd>描述</dd>
-		</dl>
+
+	<ul style="list-style-type:none;">
+		<li></li>
+	</ul>
+
+	<ol type="A">
+		<li></li>
+	</ol>
+
+	<dl>
+		<dt>名称</dt>
+		<dd>描述</dd>
+	</dl>
 	list-style-type:none | disc ...
 	type="1 | a | A" ...
+
 [a](https://www.w3schools.com/html/html_links.asp)
 
 	<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
@@ -359,3 +364,6 @@ ul | ol 居中
 [两栏 三栏布局](http://ife.baidu.com/note/detail/id/666)
 
 ## xiaowei_mission_6 任务六：通过HTML及CSS模拟报纸排版
+
+[margin垂直合并]()
+
