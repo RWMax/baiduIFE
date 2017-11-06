@@ -367,3 +367,93 @@ ul | ol 居中
 
 [margin垂直合并]()
 
+font-variant:normal | small-caps 
+
+	small-caps 将"小写字母"转化为"小型大写字母".尺寸与原来相比,变得更小.
+	normal 默认值
+
+text-transform:uppercase | capitalize | lowercase | none 
+
+	控制文本字母大小写
+	uppercase 全部大写
+	capilize 首字母大写
+	lowercase 全部小写
+
+:first-letter
+
+	选择器 选择文本的首字符
+
+:after
+:before
+
+	伪元素,常用与添加元素,清除浮动
+
+	清除浮动
+	:after {
+		content: "";
+		display: table;
+		clear:both
+	}
+
+font-style: oblique | italic | normal
+
+	字体倾斜
+	italic italic斜体,如果无斜体,应用oblique
+	oblique oblique斜体,如果无,将普通字体倾斜
+
+text-overflow: ellipsis | clip 
+
+	文本超出容器的显示方式,搭配 overflow 和 white-space 使用
+	ellipsis 显示省略号
+	clip 剪切 默认值
+
+letter-spacing: px | % | em
+	
+	字符间距
+
+background: 背景颜色 背景图片 是否重复 
+
+	定义背景,该属性为以下属性的简写
+	background-repeat: repeat | norepeat
+	background-image: url(xxx.jpg)
+	background-size:
+	background-position: left | right | center | px 
+	background-origin: padding-box|border-box|content-box;
+	
+	例 background: black url(../jpg/1.jpg) no-repeat 10px 10px;
+	替换列表标志
+	background: url(xxx.jpg) no-repeat 8px 20px;
+
+background-origin: padding-box|border-box|content-box;
+
+	定义background-position先对定位原点
+	如存在 background-attachment:fixed,该属性无效果
+	padding-box 相对内边距定位
+	border-box 相对盒边定位
+	content-box 相对内容定位
+
+white-space :nowrap | pre | pre-wrap | pre-line | normal
+
+	定义段落文本处理方式
+	可搭配 overflow:hidden 使用
+	pre 保留文本中的空格和换行符,不会自动换行.当段落文本超出容器宽度时,显示滚动条.相当于<pre>
+	pre-wrap 保留空格和换行符,超出容器宽度自动换行
+	pre-line 合并空格,保留换行符
+	normal 默认值
+
+list-style-image :url(../img/4.jpg)
+	
+	设置列表标记为图像
+	list-style-image :url(../img/4.jpg)
+注意:无法调整图像大小,应使用background代替
+
+list-style-position: inside |outside
+
+	控制列表标记显示位置
+	inside 在文本内显示,可用于修复overflow:hidden导致标记被隐藏的问题
+	outside 默认值,在文本左侧显示
+	
+[text-align: inter-word](http://www.w3school.com.cn/cssref/pr_text-justify.asp)
+	当text-align:justigy时,控制文本显示方式
+	用处不明
+
