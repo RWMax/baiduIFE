@@ -364,30 +364,243 @@ header li:hover {
 	color: white;
 }
 
-/*#city-info select {
+#city-info button {
+	width: 240px;
+	height:32px;
 	float:left;
-	margin-right:26px;
-	width: 238px;
-	height:38px;
-	padding-left:12px;
-	padding-right: 30px;
-	appearance: none;
-	-moz-appearance: none;
-  	-webkit-appearance: none;
-  	background: white url(../img/arrow.jpg) no-repeat 210px center;
-	border:1px solid #E4E7E2;
-	color: #E4E7E2;
+	background-color: #C64945;
+	border: 0;
+	font-size: 14px;
+	color: white;
+	letter-spacing: 8px;
+	/*text-align: center;*/
 }
-#city-info option {
-	height:38px;
-	line-height:38px;
-	padding:10px;
-	background: #808082;
-}*/
 
 #gallery {
-	height:600px;
+	height:606px;
 	background: grey;
+	background-color: #F8F8F8;
+	padding-top: 102px;
+	padding-left: 150px;
+
+}
+
+#gallery figure{
+	width:218px;
+	height: 336px;
+	float: left;
+	margin-right:38px;
+	background-color:white;
+	text-align: center;
+	padding-top: 10px;
+	border:1px solid #D8D8D8;
+}
+
+#gallery figcaption {
+	margin-top: 20px;
+}
+
+#gallery h4 {
+	font-size: 14px;
+	font-weight:normal;
+}
+
+#gallery p {
+	font-size: 12px;
+	line-height: 28px;
+	color: #828282;
+}
+#gallery figure:nth-of-type(2) {
+	margin-top: 50px;
+	position: relative;
 }
 
 
+#gallery figure:nth-of-type(2) figcaption {
+	margin: 0;
+	position:absolute;
+	width:216px;
+	top: -52px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#gallery figure:nth-of-type(2) h4 {
+
+	display: inline;
+	/*background-color:yellow;*/
+	font-size: 20px;
+	text-align: justify;
+	/*white-space: nowrap;*/
+	letter-spacing: 16px; 
+	width:216px;
+}
+
+#new-world {
+	color: white;
+	float: left;
+	padding-top: 124px;
+	width: 850px;
+	height:567px;
+	background: url(../img/shoe.jpg) no-repeat;
+	background-size: 854px;
+	text-align: center;
+}
+#new-world p:nth-child(1) {
+	font-size: 50px;
+}
+
+#new-world p:nth-child(2) {
+	font-size: 152px;
+	text-transform: uppercase;
+	line-height: 120px;
+}
+
+#new-world p:nth-child(3) {
+	margin-top: 34px;
+	line-height: 40px;
+	font-size: 22px;
+}
+
+#new-world-aside {
+	float: left;
+	padding-top: 160px;
+	background-color: white;
+	width: calc( 100% - 850px);
+	height:567px;
+	text-align: center;
+}
+
+#new-world-aside h3 {
+	font-size: 20px;
+	word-spacing: 16px;
+	font-weight: normal;
+}
+
+#new-world-aside h3 span {
+	color: #FF6E77;
+
+}
+
+#new-world-aside p{
+	padding-top: 26px;
+	width:284px;
+	margin:0 auto;
+	font-size:12px;
+	text-align: justify;
+	line-height:28px;
+	color: #A9A9A9;
+}
+
+#new-world-aside button {
+	width: 108px;
+	height: 32px;
+	background-color:white;
+	border:1px solid #E36872;
+	color: #E36872;
+	margin-top: 50px;
+}
+
+#new-world-aside ul {
+	/*margin: 0;*/
+	/*padding: 0;*/
+}
+
+#new-world-aside li{
+	margin-top: 26px;
+	margin-left: 8px;
+	list-style-type: none;
+	display:inline-block;
+	width:12px;
+	height:12px;
+	/*background-color:black;*/
+	border-radius: 6px;
+	border:1px solid #DCDCDC;
+}
+
+.focus {
+	background-color: #DCDCDC;
+}
+
+.new-time {
+	float:left;
+	width: 425px;
+	height: 520px;
+	color: white;
+	text-align: center;
+	background-color: #F4494A;
+}
+
+.new-time h3 {
+	margin-top: 172px;
+	font-size:20px;
+	font-weight:normal;
+	position: relative;
+	padding-bottom:28px;
+}
+.new-time h3:after {
+	content: "";
+	height: 2px;
+	width: 30px;
+	display: block;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	left:50%;
+	transform: translateX(-50%);
+
+}
+
+.new-time button {
+	margin-top:26px;
+	border: 1px solid white;
+	width: 168px;
+	height: 45px;
+	background-color: inherit;
+	color: white ;
+	font-size:22px;
+}
+
+#new-time-2 {
+	background-color: white;
+	color:black;
+}
+
+#new-time-2 button {
+	color: #F4494A;
+	border:1px solid #F4494A;
+}
+
+#new-time-2 h3:after {
+	background-color: #F4494A;
+}
+
+#new-time-aside {
+	width:calc( 100% - 850px);
+	height:520px;
+	background-color:white;
+	float: left;
+	position: relative;
+}
+
+#new-time-aside img {
+	width:100%;
+}
+#new-time-aside:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	border-top: 17px solid transparent;
+	border-left:25px solid white;
+	border-bottom:17px solid transparent;
+}
+
+#join-me {
+	clear:both;
+	/*display: inline-block;*/
+	/*overflow: hidden;*/
+	/*float: left;*/
+	height:755px;
+	background-color:white;
+	background:yellow;
+	/*border: 3px solid black;*/
+}
