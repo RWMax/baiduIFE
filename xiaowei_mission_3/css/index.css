@@ -1,74 +1,75 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	padding: 20px;
-	font-size: 12px;
-	text-align: justify;
-	min-width: 600px;
+    margin: 0;
+    padding: 20px;
+    font-size: 12px;
+    text-align: justify;
+    min-width: 600px;
 }
 
 .clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
-div, article {
-	background-color: #EDEDED;
-	border:1px solid #969696;
-	padding: 20px;
-	/*overflow: auto;*/
+div,
+article {
+    background-color: #EDEDED;
+    border: 1px solid #969696;
+    padding: 20px;
+    /*overflow: auto;*/
 }
 
 #term {
-	float: left;
-	width: 200px;
-	background-color: white;
+    float: left;
+    width: 200px;
+    background-color: white;
 }
 
 #term span {
-	vertical-align: top;
-	margin-left: 20px;
+    vertical-align: top;
+    margin-left: 20px;
 }
 
 figure {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	margin-top:20px;
-	overflow: hidden;
-	width: 80px;
-	height: 80px;
-	position: relative;
-	border: 1px solid #969696;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border: 1px solid #969696;
 }
 
 figure:first-child {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 figure img {
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	min-width: 80px;
-	min-height: 80px;
-	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 80px;
+    min-height: 80px;
+    position: absolute;
 }
 
 #gallery {
-	float: right;
-/*	overflow: hidden;*/
-	width: 122px;
-	background-color: white;
-	font-size: 0;
+    float: right;
+    /*	overflow: hidden;*/
+    width: 122px;
+    background-color: white;
+    font-size: 0;
 }
 
 #introduction {
-	margin-left:  220px;
-	margin-right: 140px;
-	background-color: white;
+    margin-left: 220px;
+    margin-right: 140px;
+    background-color: white;
 }

@@ -454,6 +454,7 @@ list-style-position: inside |outside
 	outside 默认值,在文本左侧显示
 	
 [text-align: inter-word](http://www.w3school.com.cn/cssref/pr_text-justify.asp)
+
 	当text-align:justigy时,控制文本显示方式
 	用处不明
 
