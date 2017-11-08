@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>background</title>
+    <style type="text/css">
+        .grid-container * {
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            width: 100%;
+            max-width: 1200px;
+        }
+        /*-- our cleafix hack -- */
+
+        .row:before,
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        [class*='col-'] {
+            float: left;
+            min-height: 1px;
+            width: 16.66%;
+            /*-- our gutter -- */
+            padding: 12px;
+            background-color: #FFDCDC;
+        }
+
+        .col-1 {
+            width: 16.66%;
+        }
+
+        .col-2 {
+            width: 33.33%;
+        }
+
+        .col-3 {
+            width: 50%;
+        }
+
+        .col-4 {
+            width: 66.66%;
+        }
+
+        .col-5 {
+            width: 83.33%;
+        }
+
+        .col-6 {
+            width: 100%;
+        }
+
+
+        @media all and (max-width:800px) {
+            .col-1 {
+                width: 33.33%;
+            }
+            .col-2 {
+                width: 50%;
+            }
+            .col-3 {
+                width: 83.33%;
+            }
+            .col-4 {
+                width: 100%;
+            }
+            .col-5 {
+                width: 100%;
+            }
+            .col-6 {
+                width: 100%;
+            }
+
+            .row .col-2:last-of-type {
+                width: 100%;
+            }
+
+            .row .col-5~.col-1 {
+                width: 100%;
+            }
+        }
+
+        @media all and (max-width:650px) {
+            .col-1 {
+                width: 50%;
+            }
+            .col-2 {
+                width: 100%;
+            }
+            .col-3 {
+                width: 100%;
+            }
+            .col-4 {
+                width: 100%;
+            }
+            .col-5 {
+                width: 100%;
+            }
+            .col-6 {
+                width: 100%;
+            }
+        }
+
+        .outline,
+        .outline * {
+            outline: 1px solid #F6A1A1;
+        }
+
+        [class*='col-']>p {
+            background-color: #FFC2C2;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container outline">
+        <div class="row">
+            <div class="col-1">
+                <p>col-1</p>
+            </div>
+            <div class="col-1">
+                <p>col-1</p>
+            </div>
+            <div class="col-1">
+                <p>col-1</p>
+            </div>
+            <div class="col-1">
+                <p>col-1</p>
+            </div>
+            <div class="col-1">
+                <p>col-1</p>
+            </div>
+            <div class="col-1">
+                <p>col-1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <p>col-2</p>
+            </div>
+            <div class="col-2">
+                <p>col-2</p>
+            </div>
+            <div class="col-2">
+                <p>col-2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <p>col-3</p>
+            </div>
+            <div class="col-3">
+                <p>col-3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <p>col-4</p>
+            </div>
+            <div class="col-2">
+                <p>col-2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <p>col-5</p>
+            </div>
+            <div class="col-1">
+                <p>col-1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p>col-6</p>
+            </div>
+        </div>
+    </div>
+    <p>
+        转载: <a href="http://j4n.co/blog/Creating-your-own-css-grid-system">原文地址</a>
+    </p>
+</body>
+
+</html>

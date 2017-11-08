@@ -440,3 +440,34 @@ list-style-position: inside |outside
 	当text-align:justigy时,控制文本显示方式
 	用处不明
 
+## xiaowei_mission_7
+
+user-select: none;
+
+    禁止用户选择元素内容
+user-drag: none;
+webkit-user-drag: none;    
+
+    禁止用户腿拽元素(如图片)
+
+background-size: % | cover | contain
+
+    控制背景图像大小
+    cover 等比放大图像,使其完全覆盖背景
+    contain 等比放大/缩小图像,直到无法继续.然后用图像重复填充剩余区域.
+    例
+    设置图像尺寸为150px长,100px高
+    background-size:  150px 100px; 
+    设置背景图像
+    htm {width:100%,height:100%};
+    body{background: url(xxx.jpg) no-repeat center;background-size: cover;}
+[为什么要设置html高度为100%](https://www.cnblogs.com/youxin/p/3345085.html)
+
+    1 html 元素长度|高度 由浏览器窗口控制
+    2 html元素默认overflow:auto,因此会自动显示右侧滚动条
+    3 当元素width:100%时,其宽度由父元素决定
+    4 未显示声明包含块的高度,其百分数高度会重置为auto
+    
+    [绘制三角形](http://www.cnblogs.com/youhong/p/6530575.html)
+    
+    

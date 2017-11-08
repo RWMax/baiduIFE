@@ -135,13 +135,9 @@ header li:hover {
     font-family: SimHei;
 }
 
-
-/*method 1*/
-
 #section-1 div {
     position: relative;
     float: left;
-    box-sizing: border-box;
     width: 320px;
     height: 100%;
     padding-top: 130px;
@@ -188,7 +184,6 @@ header li:hover {
 #section-1 div:nth-child(3):after {
     background: url(../img/flower.jpg) no-repeat 3px 0;
 }
-
 
 #section-1 div:nth-child(4):after {
     background: url(../img/square.jpg) no-repeat 1px 0;
@@ -348,7 +343,6 @@ header li:hover {
     position: relative;
     margin-top: 50px;
 }
-
 
 #gallery figure:nth-of-type(2) figcaption {
     position: absolute;
@@ -551,7 +545,6 @@ header li:hover {
     position: absolute;
     bottom: 0;
     left: 50%;
-    /*top: 50%;*/
     display: block;
     width: 30px;
     height: 2px;
@@ -683,7 +676,6 @@ header li:hover {
 
 #contact-us li img {
     cursor: pointer;
-
     -webkit-user-drag: none;
 }
 
