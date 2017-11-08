@@ -1,19 +1,8 @@
-# bnote
+# note
 
-### question
-
-	1 overflow 对兄弟元素间的影响
-	2 bfc 设计模式
-	3 box-sizing:border-box chrome与其他浏览器的显示区别
-### todo
-	xiaowei_mission_6 兼容ie
-
-### html_mission_l 零基础HTML编码
+## xiaowei_mission_l 零基础HTML编码
 
 [ul ol](https://www.w3schools.com/html/html_lists.asp)
-
-	无序列表 ul
-	有序列表 ol
 
 	<ul style="list-style-type:none;">
 		<li></li>
@@ -27,6 +16,7 @@
 		<dt>名称</dt>
 		<dd>描述</dd>
 	</dl>
+
 	list-style-type:none | disc ...
 	type="1 | a | A" ...
 
@@ -54,10 +44,6 @@
 	当窗口宽度小于100px时,显示 smaller.jpg
 
 [figure figcaption](http://www.w3school.com.cn/tags/tag_figure.asp)
-
-[span]()
-
-[time]()
 
 [table thead tbody tfoot tr th td](http://www.w3school.com.cn/tags/tag_table.asp)
 
@@ -229,9 +215,11 @@ overflow-y
 		clear: both;
 	}
 
+[两栏 三栏布局](http://ife.baidu.com/note/detail/id/666)
+
 ## xiaowei_mission_4 任务四：定位和居中问题
 
-opacity: 0.5 透明度
+opacity: 0.5 控制元素透明度
 
 [z-index: 1 | 2 ...]()
 	
@@ -318,10 +306,6 @@ https://www.zhihu.com/question/35113393
 	设置容器字体大小为0,在子元素里改回来
 	.container {font-size:0;}
 	.container * {font-size: medium;}
-	
-BFC 模式
-	
-	todo
 
 [white-space: nowrap](http://www.w3school.com.cn/cssref/pr_text_white-space.asp)
 
@@ -360,8 +344,6 @@ ul | ol 居中
 	@media screen and (max-width:700px){}
 	当屏幕尺寸小于1200px大于700px
 	@media screen and (mix-width:701px) and (max-width: 1200px){}
-
-[两栏 三栏布局](http://ife.baidu.com/note/detail/id/666)
 
 ## xiaowei_mission_6 任务六：通过HTML及CSS模拟报纸排版
 
