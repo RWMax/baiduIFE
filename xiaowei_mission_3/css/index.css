@@ -3,25 +3,24 @@
 }
 
 body {
+    min-width: 600px;
     margin: 0;
     padding: 20px;
     font-size: 12px;
     text-align: justify;
-    min-width: 600px;
 }
 
 .clearfix::after {
-    content: "";
     display: table;
     clear: both;
+    content: "";
 }
 
 div,
 article {
-    background-color: #EDEDED;
-    border: 1px solid #969696;
     padding: 20px;
-    /*overflow: auto;*/
+    border: 1px solid #969696;
+    background-color: #ededed;
 }
 
 #term {
@@ -31,19 +30,19 @@ article {
 }
 
 #term span {
-    vertical-align: top;
     margin-left: 20px;
+    vertical-align: top;
 }
 
 figure {
+    position: relative;
     display: inline-block;
-    margin: 0;
-    padding: 0;
-    margin-top: 20px;
     overflow: hidden;
     width: 80px;
     height: 80px;
-    position: relative;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
     border: 1px solid #969696;
 }
 
@@ -52,24 +51,23 @@ figure:first-child {
 }
 
 figure img {
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     min-width: 80px;
     min-height: 80px;
-    position: absolute;
+    transform: translate(-50%, -50%);
 }
 
 #gallery {
     float: right;
-    /*	overflow: hidden;*/
     width: 122px;
-    background-color: white;
     font-size: 0;
+    background-color: white;
 }
 
 #introduction {
-    margin-left: 220px;
     margin-right: 140px;
+    margin-left: 220px;
     background-color: white;
 }
