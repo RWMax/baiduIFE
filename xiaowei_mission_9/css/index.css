@@ -25,7 +25,7 @@ body {
     background: yellow;
 }
 
-#main > header {
+#main>header {
     position: relative;
     height: 56px;
     background: #0082bd;
@@ -98,6 +98,10 @@ header input:before {
     content: "";
     background: url(../img/glass.png) no-repeat;
 }
+
+
+
+
 
 
 /*aside start*/
@@ -181,6 +185,10 @@ aside {
 }
 
 
+
+
+
+
 /*aside-list*/
 
 .aside-list {
@@ -231,7 +239,7 @@ aside {
 }
 
 .aside-list dd {
-    position: relative;   
+    position: relative;
     margin-left: 14px;
 }
 
@@ -244,15 +252,15 @@ aside {
     height: 12px;
     content: "";
     transform: translateY(-50%);
-    background: url(../img/document.png) no-repeat;   
+    background: url(../img/document.png) no-repeat;
 }
 
 .list-title,
 .list-row dl {
-    opacity: 0.5;
+    opacity: .5;
 }
 
-.aside-list dl{
+.aside-list dl {
     display: none;
 }
 
@@ -283,6 +291,8 @@ aside {
 
 
 /*aside-list end*/
+
+
 /*aside end*/
 
 #body {
@@ -294,11 +304,74 @@ aside {
     background: #ececec;
 }
 
-#body > header {
+.title {
     height: 30px;
     margin-right: -70px;
     margin-left: -60px;
+    font-size: 12px;
+    color: #adadad;
     background: white;
+}
+
+.title span {
+    margin-left: 28px;
+    line-height: 30px;
+}
+
+
+
+/*search */
+
+.drop-list {
+    position: relative;
+    /*float: left;*/
+    height: 24px;
+    font-size: 12px;
+    line-height: 24px;
+    cursor: default;
+    border: 1px solid #adadad;
+}
+
+.drop-list span,
+.drop-list li {
+    width: 100%;
+    padding-left: 12px;
+}
+
+.drop-list ul {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    width: 100%;
+    background: yellow;
+}
+
+.drop-list li {
+    list-style: none;
+    background: #adadad;
+}
+
+.drop-list:after {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    display: block;
+    width: 9px;
+    height: 5px;
+    content: "";
+    background: url(../img/arrow-down.png) no-repeat;
+}
+
+.drop-list:hover ul {
+    display: block;
+    display: block;
+    list-style: none;
+    color: white;
+    background: #ccc;
+}
+
+.drop-list li:hover {
+    background: #eee;
 }
 
 #search {
@@ -306,7 +379,160 @@ aside {
     margin-top: 20px;
     border: 1px solid #ccc;
     background: white;
+    position: relative;
 }
+
+#search-item {
+    position: relative;
+    float: left;
+    width: 70px;
+    margin-top: 16px;
+    margin-left: 80px;
+}
+
+#search-item:before {
+    position: absolute;
+    left: -50px;
+    content: "查询项";
+    color: #adadad;
+}
+
+.deal-man {
+    float: left;
+    margin-top: 16px;
+    position: relative;
+}
+
+.buy-p,
+.sell-p {
+    width: 120px;
+    margin-left: 78px;
+}
+
+.sell-p {
+    margin-top: 4px;
+}
+
+.buy-p:before {
+    position: absolute;
+    left: -50px;
+    content: "买方";
+    color: #adadad;
+}
+
+.sell-p:before {
+    position: absolute;
+    left: -50px;
+    content: "卖方";
+    color: #adadad;
+}
+
+.deal-man:after {
+    position: absolute;
+    /*top:0;*/
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 27px;
+    height: 37px;
+    /*left: -50px;*/
+    content: "";
+    background: url(../img/change.png) no-repeat;
+    color: #adadad;
+}
+
+.search-piece-3 {
+    float: left;
+    width: 120px;
+    margin-top: 16px;
+    margin-left: 80px;
+}
+
+#search-argu-date {
+    text-align: center;
+    line-height: 24px;
+    width: 120px;
+    height: 24px;
+    border: 1px solid #adadad;
+    font-size: 12px;
+    position: relative;
+}
+
+#s-man-num {
+    margin-top: 6px;
+    width: 70px;
+    /*height:24px;*/
+}
+
+#search-argu-date:before {
+    position: absolute;
+    left: -30px;
+    content: "卖方";
+    color: #adadad;
+}
+
+#s-man-num:before {
+    position: absolute;
+    left: -30px;
+    content: "人数";
+    color: #adadad;
+}
+
+.search-piece-4 {
+    margin-left: 14px;
+    float: left;
+    margin-top: 16px;
+    width: 120px;
+}
+
+#all-time {
+    float: right;
+    width: 70px;
+}
+
+#all-time:before {
+    position: absolute;
+    left: -40px;
+    content: "总耗时";
+    color: #adadad;
+}
+
+#deal-num {
+    float: left;
+    margin-top: 6px;
+    width: 120px;
+}
+
+#deal-num:before {
+    position: absolute;
+    left: -40px;
+    content: "成交项";
+    color: #adadad;
+}
+
+.s-sub-btn {
+    margin-left: 30px;
+    height: 100%;
+    border: 1px solid;
+    float: left;
+    position: relative;
+}
+
+#s-btn {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 26px;
+    color: white;
+    border-radius: 4px;
+    border: 0;
+    background: #2880CB;
+}
+
+
+/*search end*/
 
 #history {
     height: 64px;
