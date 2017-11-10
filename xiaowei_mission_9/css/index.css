@@ -4,20 +4,17 @@
     padding: 0;
 }
 
-body {
-    font-family: "Microsoft YaHei";
-    background-color: #595959;
-}
-
 html,
 body {
     height: 100%;
 }
 
+body {
+    font-family: "Microsoft YaHei";
+    background-color: #595959;
+}
 
-
-#main {
-    /*min-height:100%;*/
+.main {
     overflow: hidden;
     width: 1280px;
     margin: 0 auto;
@@ -25,13 +22,13 @@ body {
     background: yellow;
 }
 
-#main>header {
+.main > header {
     position: relative;
     height: 56px;
     background: #0082bd;
 }
 
-#logo {
+.logo {
     width: 34px;
     margin-top: 11px;
     margin-left: 50px;
@@ -99,33 +96,26 @@ header input:before {
     background: url(../img/glass.png) no-repeat;
 }
 
-
-
-
-
-
 /*aside start*/
 
 aside {
     float: left;
     width: 260px;
     height: 1220px;
-    /*    padding-left:46px;*/
     background: #2d2f3d;
 }
 
 .i-info {
-    /*height: 54px;*/
     margin-top: 22px;
     margin-left: 49px;
 }
 
-#i-face,
-#i-name {
+.i-face,
+.i-name {
     float: left;
 }
 
-#i-face {
+.i-face {
     position: relative;
     width: 48px;
     height: 48px;
@@ -133,7 +123,7 @@ aside {
     background: white;
 }
 
-#i-face:before {
+.i-face:before {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -146,7 +136,7 @@ aside {
     border-radius: 54px;
 }
 
-#i-name {
+.i-name {
     margin-left: 22px;
     line-height: 48px;
     color: white;
@@ -155,28 +145,25 @@ aside {
 .i-data {
     clear: both;
     margin-top: 16px;
-    padding-left: 46px;
+    font-size: 0;
 }
 
-#i-like,
-#i-fan {
+.i-like,
+.i-fan {
+    position: relative;
     display: inline-block;
-    width: 80px;
     margin-top: 28px;
-    margin-left: 16px;
+    margin-left: 62px;
     font-size: 12px;
     line-height: 16px;
+    text-align: center;
     color: #aeaeae;
 }
 
-#i-fan {
-    position: relative;
-}
-
-#i-fan:before {
+.i-fan:before {
     position: absolute;
     top: 2px;
-    left: -40px;
+    left: -36px;
     display: block;
     width: 1px;
     height: 30px;
@@ -184,14 +171,9 @@ aside {
     background: #aeaeae;
 }
 
-
-
-
-
-
 /*aside-list*/
 
-.aside-list {
+.nav {
     margin-top: 20px;
     font-size: 12px;
     color: white;
@@ -201,32 +183,32 @@ aside {
     padding-left: 46px;
 }
 
-.list-title span {
+.dl-title span {
     margin-left: 8px;
 }
 
-.list-title {
+.dl-title {
     width: 100px;
     height: 40px;
     line-height: 40px;
 }
 
-.aside-list dt,
-.aside-list dd {
+.nav dt,
+.nav dd {
     height: 30px;
     line-height: 30px;
 }
 
-.aside-list dl {
+.nav dl {
     position: relative;
     margin-left: 60px;
 }
 
-.aside-list dt {
+.nav dt {
     position: relative;
 }
 
-.aside-list dt:before {
+.nav dt:before {
     position: absolute;
     top: 50%;
     left: -18px;
@@ -238,12 +220,12 @@ aside {
     background: url(../img/file.png) no-repeat;
 }
 
-.aside-list dd {
+.nav dd {
     position: relative;
     margin-left: 14px;
 }
 
-.aside-list dd:before {
+.nav dd:before {
     position: absolute;
     top: 50%;
     left: -18px;
@@ -255,12 +237,12 @@ aside {
     background: url(../img/document.png) no-repeat;
 }
 
-.list-title,
+.dl-title,
 .list-row dl {
     opacity: .5;
 }
 
-.aside-list dl {
+.nav dl {
     display: none;
 }
 
@@ -268,7 +250,7 @@ aside {
     background: #393d4d;
 }
 
-.list-row:hover .list-title {
+.list-row:hover .dl-title {
     opacity: 1;
 }
 
@@ -289,13 +271,11 @@ aside {
     color:white;
 }*/
 
-
 /*aside-list end*/
-
 
 /*aside end*/
 
-#body {
+.body {
     float: left;
     width: calc(100% - 260px);
     height: 1220px;
@@ -319,12 +299,10 @@ aside {
 }
 
 
-
 /*search */
 
 .drop-list {
     position: relative;
-    /*float: left;*/
     height: 24px;
     font-size: 12px;
     line-height: 24px;
@@ -334,8 +312,8 @@ aside {
 
 .drop-list span,
 .drop-list li {
-    width: 100%;
-    padding-left: 12px;
+    /*width: 100%;*/
+    padding-left: 10px;
 }
 
 .drop-list ul {
@@ -343,12 +321,9 @@ aside {
     z-index: 2;
     display: none;
     width: 100%;
-    background: yellow;
-}
-
-.drop-list li {
     list-style: none;
-    background: #adadad;
+    color: black;
+    background: white;
 }
 
 .drop-list:after {
@@ -363,11 +338,8 @@ aside {
 }
 
 .drop-list:hover ul {
+    /*    display: block;*/
     display: block;
-    display: block;
-    list-style: none;
-    color: white;
-    background: #ccc;
 }
 
 .drop-list li:hover {
@@ -375,115 +347,112 @@ aside {
 }
 
 #search {
+    position: relative;
     height: 84px;
     margin-top: 20px;
     border: 1px solid #ccc;
     background: white;
-    position: relative;
 }
 
-#search-item {
+#s-item {
     position: relative;
     float: left;
     width: 70px;
-    margin-top: 16px;
+    margin-top: 14px;
     margin-left: 80px;
 }
 
-#search-item:before {
+#s-item:before {
     position: absolute;
-    left: -50px;
+    left: -52px;
     content: "查询项";
     color: #adadad;
 }
 
 .deal-man {
-    float: left;
-    margin-top: 16px;
     position: relative;
+    float: left;
+    margin-top: 14px;
 }
 
 .buy-p,
 .sell-p {
     width: 120px;
-    margin-left: 78px;
+    margin-left: 76px;
 }
 
 .sell-p {
-    margin-top: 4px;
+    margin-top: 6px;
 }
 
 .buy-p:before {
     position: absolute;
-    left: -50px;
+    left: -40px;
     content: "买方";
     color: #adadad;
 }
 
 .sell-p:before {
     position: absolute;
-    left: -50px;
+    left: -40px;
     content: "卖方";
     color: #adadad;
 }
 
 .deal-man:after {
     position: absolute;
-    /*top:0;*/
-    right: -30px;
     top: 50%;
-    transform: translateY(-50%);
+    right: -30px;
     display: block;
     width: 27px;
     height: 37px;
-    /*left: -50px;*/
     content: "";
-    background: url(../img/change.png) no-repeat;
+    transform: translateY(-50%);
     color: #adadad;
+    background: url(../img/change.png) no-repeat;
 }
 
 .search-piece-3 {
     float: left;
     width: 120px;
-    margin-top: 16px;
-    margin-left: 80px;
+    margin-top: 14px;
+    margin-left: 100px;
 }
 
-#search-argu-date {
-    text-align: center;
-    line-height: 24px;
+.s-date {
+    position: relative;
     width: 120px;
     height: 24px;
-    border: 1px solid #adadad;
+    padding-left: 8px;
     font-size: 12px;
-    position: relative;
+    line-height: 24px;
+    border: 1px solid #adadad;
+}
+
+.s-date:before {
+    position: absolute;
+    left: -42px;
+    content: "日期";
+    color: #adadad;
 }
 
 #s-man-num {
-    margin-top: 6px;
     width: 70px;
-    /*height:24px;*/
-}
-
-#search-argu-date:before {
-    position: absolute;
-    left: -30px;
-    content: "卖方";
-    color: #adadad;
+    margin-top: 6px;
 }
 
 #s-man-num:before {
     position: absolute;
-    left: -30px;
+    left: -42px;
     content: "人数";
     color: #adadad;
 }
 
 .search-piece-4 {
-    margin-left: 14px;
     float: left;
-    margin-top: 16px;
     width: 120px;
+    margin-top: 14px;
+    margin-left: 10px;
 }
 
 #all-time {
@@ -493,98 +462,636 @@ aside {
 
 #all-time:before {
     position: absolute;
-    left: -40px;
+    left: -46px;
     content: "总耗时";
     color: #adadad;
 }
 
 #deal-num {
     float: left;
-    margin-top: 6px;
     width: 120px;
+    margin-top: 6px;
 }
 
 #deal-num:before {
     position: absolute;
-    left: -40px;
+    left: -46px;
     content: "成交项";
     color: #adadad;
 }
 
 .s-sub-btn {
-    margin-left: 30px;
-    height: 100%;
-    float: left;
     position: relative;
+    float: left;
+    height: 100%;
+    margin-left: 30px;
 }
 
 #s-btn {
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
     width: 48px;
     height: 26px;
+    transform: translateY(-50%);
     color: white;
-    border-radius: 4px;
     border: 0;
-    background: #2880CB;
+    border-radius: 4px;
+    background: #2880cb;
 }
-
 
 /*search end*/
 
-#history {
+.history {
+    /*background: blue;*/
+    position: relative;
     height: 64px;
     margin-top: 10px;
-    background: blue;
+    cursor: default;
 }
 
-#count {
+.h-list {
+    float: left;
+}
+
+.h-ul {
+    display: block;
+    overflow: auto;
+    /*border: 4px solid yellow;*/
+    padding-left: 35px;
+    list-style: none;
+}
+
+.h-li {
+    position: relative;
+    float: left;
+    width: 110px;
+    height: 64px;
+    margin-right: 5px;
+    padding-top: 10px;
+    text-align: center;
+    border: 1px solid #adadad;
+    background: white;
+}
+
+.h-li:hover:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    content: "";
+    background: #91b0cf;
+}
+
+.h-time {
+    font-size: 12px;
+}
+
+.h-am:after {
+    margin-left: 6px;
+    content: "am";
+}
+
+.h-pm:after {
+    margin-left: 6px;
+    content: "pm";
+}
+
+.h-price {
+    margin-top: 6px;
+    font-size: 18px;
+    color: red;
+}
+
+.h-price:before {
+    position: relative;
+    left: -4px;
+    font-size: 12px;
+    content: "¥";
+    color: #adadad;
+}
+
+.h-before-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    border: 1px solid #adadad;
+    background: white;
+}
+
+.h-after-btn {
+    position: absolute;
+    top: 0;
+    right: 135px;
+    width: 30px;
+    height: 100%;
+    border: 1px solid #adadad;
+    background: white;
+}
+
+.h-search {
+    float: right;
+    width: 130px;
+    height: 100%;
+    font-size: 12px;
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid #adadad;
+    background: white;
+}
+
+.h-search img,
+.h-search span {
+    vertical-align: middle;
+}
+
+/*history end*/
+
+.month-total {
     position: relative;
     height: 72px;
     margin-top: 40px;
-    background: blue;
 }
 
-#count:before {
+.month-total:before {
     position: absolute;
     top: -20px;
     font-size: 12px;
     content: "2016年4月份统计";
 }
 
-#item-info-1,
-#item-info-2,
-#calendar,
-#rank {
+.month-total li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 200px;
+    height: 72px;
+    margin-right: 30px;
+    padding-top: 16px;
+    padding-left: 8px;
+    font-size: 12px;
+    list-style: none;
+    border: 1px solid #adadad;
+    border-left: 4px solid;
+    background: white;
+}
+
+.month-total li:last-child {
+    margin-right: 0;
+}
+
+.month-total span {
+    position: relative;
+}
+
+.month-total span:before {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    font-size: 12px;
+    content: "成交量";
+    color: #adadad;
+}
+
+.m-green {
+    border-left-color: #00b29b!important;
+}
+
+.m-blue {
+    border-left-color: #2e83be!important;
+}
+
+.m-orange {
+    border-left-color: #d84633!important;
+}
+
+.m-yellow {
+    border-left-color: #ded049!important;
+}
+
+.month-total li:after {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    display: block;
+    width: 60px;
+    height: 46px;
+    content: "";
+    transform: translateY(-50%);
+    background-color: black;
+}
+
+.m-green:after {
+    background: #00b29b!important;
+}
+
+.m-blue:after {
+    background: #2e83be!important;
+}
+
+.m-orange:after {
+    background: #d84633!important;
+}
+
+.m-yellow:after {
+    background: #ded049!important;
+}
+
+/*month-total end*/
+
+.item-info-left,
+.item-right,
+.calendar,
+.brand-ranking {
     float: left;
     border: 1px solid #ccc;
     border-radius: 6px;
     background: white;
 }
 
-#item-info-1 {
+.il-title,
+.itemr-header,
+.cal-header,
+.br-header {
+    width: 100%;
+    height: 41px;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 41px;
+    color: #b2b2b2;
+    border-radius: 6px 6px 0 0;
+    background: #f3f4f7;
+}
+
+.item-info-left {
+    position: relative;
     width: 532px;
     height: 358px;
     margin-top: 12px;
 }
 
-#item-info-2 {
+.il-list {
+    position: absolute;
+    z-index: 3;
+    top: 53px;
+    left: 18px;
+}
+
+.il-list li {
+    display: block;
+    float: left;
+    width: 84px;
+    height: 28px;
+    margin-right: 4px;
+    font-size: 12px;
+    line-height: 26px;
+    list-style: none;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px 4px 0 0;
+    background: #edecf1;
+}
+
+.il-list li:hover {
+    border-bottom: white;
+    background: white;
+}
+
+.il-list li:last-child {
+    margin-right: 0;
+}
+
+.il-table-content {
+    width: 490px;
+    height: 250px;
+    margin-top: 39px;
+    margin-left: 18px;
+    border: 1px solid #c9c9c9;
+    border-radius: 0 0 4px 4px;
+}
+
+.il-table {
+    z-index: 2;
+    margin-top: 28px;
+    margin-left: 37px;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+/*don't copy table content*/
+/*.il-table:after {
+    position: absolute;
+    top: 80px;
+    left: 18px;
+    display: block;
+    width: 490px;
+    height: 250px;
+    content: "";
+    border: 1px solid #c9c9c9;
+    border-radius: 0 0 4px 4px;
+    z-index: 1;
+}
+*/
+
+.il-table td {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    letter-spacing: .3px;
+    border: 1px solid #c9c9c9;
+}
+
+.il-table td:hover {
+    background: #f3f4f7;
+}
+
+.item-right {
     width: calc(100% - 532px - 8px);
     height: 358px;
     margin-top: 12px;
     margin-left: 8px;
 }
 
-#calendar {
+.itemr-content {
+    margin-top: 14px;
+    padding: 0 34px;
+    font-size: 12px;
+}
+
+.itemr-content p {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 16px;
+}
+
+.itemr-content p:before {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    color: #b2b2b2;
+}
+
+.itemr-title:before {
+    content: "标题";
+}
+
+.itemr-price:before {
+    content: "价格";
+}
+
+.itemr-man:before {
+    content: "负责人";
+}
+
+.itemr-detail:before {
+    content: "详细描述";
+}
+
+.itemr-title {
+    height: 44px;
+    padding-top: 34px;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.itemr-price {
+    float: left;
+    width: 94px;
+    height: 44px;
+}
+
+.itemr-man {
+    float: left;
+    width: calc(100% - 94px);
+    height: 44px;
+    border-left: 1px solid #b2b2b2;
+}
+
+.itemr-detail {
+    clear: both;
+    height: 146px;
+    border-top: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.itemr-law {
+    height: 40px;
+    padding-left: 4px;
+}
+
+.itemr-low-btn {
+    vertical-align: middle;
+}
+
+.itemr-law label {
+    padding-left: 4px;
+    line-height: 32px;
+}
+
+.itemr-search-btn {
+    float: right;
+    width: 50px;
+    height: 24px;
+    margin-top: 4px;
+    font-size: 12px;
+    vertical-align: middle;
+    color: white;
+    border: 0;
+    background: #2e83be;
+}
+
+
+/*item-right end*/
+
+.calendar {
     width: 350px;
     height: 354px;
     margin-top: 8px;
 }
 
-#rank {
+.date-selector {
+    margin: 10px 22px;
+}
+
+.date-selector * {
+    font-size: 12px;
+    border: 1px solid #ccc;
+}
+
+.year {
+    float: left;
+    width: 64px;
+    height: 22px;
+    margin-right: 6px;
+}
+
+.month {
+    float: left;
+    width: 84px;
+    height: 22px;
+    margin-right: 6px;
+}
+
+.day {
+    float: left;
+    width: 74px;
+    height: 22px;
+    margin-right: 6px;
+}
+
+.return-today {
+    width: 64px;
+    height: 22px;
+    vertical-align: top;
+    background: white;
+}
+
+.cal-week {
+    width: calc(100% - 44px);
+    height: 30px;
+    margin: 10px 22px 6px 22px;
+    font-size: 12px;
+    border-top: 1px solid #a0cbeb;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.cal-week td {
+    text-align: center;
+}
+
+.cal-content {
+    width: calc(100% - 44px);
+    margin: 0 22px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.cal-content td {
+    width: 14.2857%;
+    height: 44px;
+    font-size: 12px;
+    -webkit-transform: scale(.833);
+}
+
+.holiday p:nth-child(2) {
+    color: #dc5a5f;
+}
+
+.weekend p:first-child {
+    color: #dc5a5f;
+}
+
+.selected {
+    outline: 1px solid #f6d764;
+}
+/*calendar end*/
+.brand-ranking {
     width: calc(100% - 350px - 8px);
     height: 354px;
     margin-top: 8px;
     margin-left: 8px;
+}
+
+.br-table,
+.br-table th,
+.br-table td{
+    height: 25px;
+    border-collapse: collapse;
+    border: 1px solid #c9c9c9;
+}
+.br-table th,
+.br-table td {
+    font-size: 12px;
+    -webkit-transform: scale(.833);
+}
+.br-table td {
+    position: relative;
+}
+.br-table {
+    width: calc(100% - 80px);
+    margin-top: 18px;
+    margin-right: 40px;
+    margin-left: 40px;
+    text-align: center;
+    /*    height: 200px;*/
+}
+
+.search-index,
+.br-table tr td:nth-child(3) {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.ranking {
+    width: 70px;
+}
+
+.brand {
+    width: 90px;
+}
+
+.search-num {
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: 200px;
+    height: 4px;
+    transform: translateY(-50%);
+    background: #dadada;
+}
+.ord-1 {
+    width: 100%;
+    height: 4px;
+    background: #f9684d;
+}
+
+.ord-2 {
+    width: 75%;
+    height: 4px;
+    background: #f87d4d;
+}
+
+.ord-3 {
+    width: 65%;
+    height: 4px;
+    background: #f69d4c;
+}
+
+.ord-4 {
+    width: 60%;
+    height: 4px;
+    background: #7ecbf0;
+}
+
+.ord-5 {
+    width: 55%;
+    height: 4px;
+    background: #76c7ee;
+}
+.ord-6 {
+    width: 50%;
+    height: 4px;
+    background: #71c7ee;
+}
+.ord-7 {
+    width: 45%;
+    height: 4px;
+    background: #71c6f0;
+}
+.ord-8 {
+    width: 40%;
+    height: 4px;
+    background: #71c6f0;
+}
+.ord-9 {
+    width: 35%;
+    height: 4px;
+    background: #71c6f0;
+}
+.ord-10 {
+    width: 32%;
+    height: 4px;
+    background: #71c6f0;
 }
