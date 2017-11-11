@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    outline: 1px solid #aaa;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.child {
+    width: 150px;
+    margin-bottom: 20px;
+    outline: 1px solid #aaa;
+}
+
+.ch-1 {
+    height: 120px;
+}
+
+.ch-2 {
+    height: 100px;
+}
+
+.ch-3 {
+    height: 40px;
+}
+
+.ch-4 {
+    height: 200px;
+}
+
+@media all and (max-width: 640px) {
+    .container {
+        align-items: flex-start;
+    }
+    .ch-4 {
+        outline: 1px solid blue;
+        order: -1;
+    }
+}
