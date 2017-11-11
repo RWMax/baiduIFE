@@ -468,6 +468,38 @@ background-size: % | cover | contain
     3 当元素width:100%时,其宽度由父元素决定
     4 未显示声明包含块的高度,其百分数高度会重置为auto
     
-    [绘制三角形](http://www.cnblogs.com/youhong/p/6530575.html)
+[绘制三角形](http://www.cnblogs.com/youhong/p/6530575.html)
+
+## xiaowei_mission_9 任务九：使用HTML/CSS实现一个复杂页面
+
+### width: 100% 中的 100% 是谁?
+分以下情况讨论
+    1 box-sizing:context-box
+    child width =(parent)width
     
+    2 box-sizing:border-box
+   child width = (parent)width- (parent)border*2 - (parent)padding * 2
+
+    3 (child)position: absolute and box-sizing:context-box
+    (child)width = (parent)width + (parent)padding * 2
+    
+    4 (child)position: absolute and box-sizing:border-box
+    (child)width = (parent)width - (parent)border * 2 
+
+注意 [padding-box已被废除](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing#compat-desktop)
+
+
+ele1~ele2 选择器
+
+    选择ele1元素后的所有同级ele2元素
+    例
+    .container~div {}
+    
+    <div>选不到</div>
+    <div class="container"></div>
+    <div>能选到</div>
+    <div>能选到</div>
+    <p></p>
+    <div class="">能选到</div>
+
     
