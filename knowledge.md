@@ -377,6 +377,9 @@ text-transform:uppercase | capitalize | lowercase | none
 		clear:both
 	}
 
+注意:如果不能包含其他元素,那么不能添加伪元素,如 input img iframe,
+[解决办法为在外边套一个div](https://www.zhihu.com/question/21296044)
+
 font-style: oblique | italic | normal
 
 	字体倾斜
@@ -473,18 +476,8 @@ background-size: % | cover | contain
 ## xiaowei_mission_9 任务九：使用HTML/CSS实现一个复杂页面
 
 ### width: 100% 中的 100% 是谁?
-分以下情况讨论
-    1 box-sizing:context-box
-    child width =(parent)width
-    
-    2 box-sizing:border-box
-   child width = (parent)width- (parent)border*2 - (parent)padding * 2
 
-    3 (child)position: absolute and box-sizing:context-box
-    (child)width = (parent)width + (parent)padding * 2
-    
-    4 (child)position: absolute and box-sizing:border-box
-    (child)width = (parent)width - (parent)border * 2 
+[对于绝对定位元素,其宽度根据父元素padding box计算](https://css-tricks.com/almanac/properties/w/width/#article-header-id-0)
 
 注意 [padding-box已被废除](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing#compat-desktop)
 
@@ -502,4 +495,14 @@ ele1~ele2 选择器
     <p></p>
     <div class="">能选到</div>
 
-    
+transform:scale(倍数)
+
+	元素缩放
+
+	chrome不支持小于12px的字体,可以利用scale突破限制
+	设置10px字体(scale括号内值为 字号/12)
+	font-size:12px;
+	transform:scale(0.8333)
+[zoom和scale的区别](http://www.zhangxinxu.com/wordpress/2015/11/zoom-transform-scale-diff/)
+
+[transform对普通元素的影响](http://www.zhangxinxu.com/wordpress/2015/05/css3-transform-affect/)

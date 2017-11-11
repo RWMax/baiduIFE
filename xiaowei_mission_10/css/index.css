@@ -7,7 +7,7 @@
 .container {
     display: flex;
     padding: 20px;
-    outline: 1px solid #aaa;
+    outline: 1px solid black;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
@@ -16,7 +16,7 @@
 .child {
     width: 150px;
     margin-bottom: 20px;
-    outline: 1px solid #aaa;
+    outline: 1px solid black;
 }
 
 .ch-1 {

@@ -992,7 +992,7 @@ aside {
 .br-table th,
 .br-table td {
     font-size: 12px;
-    -webkit-transform: scale(.833);
+    transform: scale(.833);
 }
 
 .br-table td {
