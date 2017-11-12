@@ -401,7 +401,7 @@ background: 背景颜色 背景图片 是否重复
 	定义背景,该属性为以下属性的简写
 	background-repeat: repeat | norepeat
 	background-image: url(xxx.jpg)
-	background-size:
+	background-size: 
 	background-position: left | right | center | px 
 	background-origin: padding-box|border-box|content-box;
 	
@@ -409,6 +409,18 @@ background: 背景颜色 背景图片 是否重复
 	替换列表标志
 	background: url(xxx.jpg) no-repeat 8px 20px;
 
+background-size: % | cover | contain
+
+    控制背景图像大小
+    cover 等比放大图像,使其完全覆盖背景
+    contain 等比放大/缩小图像,直到无法继续.然后用图像重复填充剩余区域.
+    例
+    设置图像尺寸为150px长,100px高
+    background-size:  150px 100px; 
+    设置背景图像
+    htm {width:100%,height:100%};
+    body{background: url(xxx.jpg) no-repeat center;background-size: cover;}
+ 
 background-origin: padding-box|border-box|content-box;
 
 	定义background-position先对定位原点
@@ -453,17 +465,6 @@ webkit-user-drag: none;
 
     禁止用户腿拽元素(如图片)
 
-background-size: % | cover | contain
-
-    控制背景图像大小
-    cover 等比放大图像,使其完全覆盖背景
-    contain 等比放大/缩小图像,直到无法继续.然后用图像重复填充剩余区域.
-    例
-    设置图像尺寸为150px长,100px高
-    background-size:  150px 100px; 
-    设置背景图像
-    htm {width:100%,height:100%};
-    body{background: url(xxx.jpg) no-repeat center;background-size: cover;}
 [为什么要设置html高度为100%](https://www.cnblogs.com/youxin/p/3345085.html)
 
     1 html 元素长度|高度 由浏览器窗口控制

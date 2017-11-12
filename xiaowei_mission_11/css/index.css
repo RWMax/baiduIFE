@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+
+a,
+img {
+    -weblit-bouch-callout: none;
+}
+
+html {
+    font-size: 75px;
+}
+
+body {
+    /*font-size: 1.56rem;*/
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 1.133333rem;
+    font-size: .4266rem;
+    text-align: center;
+    color: white;
+    background: #00c5d5;
+}
+
+.return-btn {
+    position: absolute;
+    top: 50%;
+    left: .293333rem;
+    font-size: .426666rem;
+    transform: translateY(-50%);
+    color: white;
+    border: 0;
+    outline: 0;
+    background: inherit;
+}
+
+.return-btn * {
+    vertical-align: middle;
+}
+
+.header-title {
+    line-height: 1.133333rem;
+    cursor: default;
+}
+
+.nav {
+    width: 100%;
+    height: 1.173333rem;
+    padding: 0 .266666rem;
+    font-size: .346666rem;
+    background: white;
+}
+
+.nav li {
+    position: relative;
+    float: left;
+    /*width: 1.946666rem;*/
+    width: 20%;
+    line-height: 1.173333rem;
+    list-style: none;
+    cursor: default;
+    text-align: center;
+}
+
+.nav-forus:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: .053333rem;
+    content: "";
+    background: #00c5d5;
+}
+
+.banner {
+    overflow: hidden;
+    /*background: yellow;*/
+    width: 100%;
+    height: 5.493333rem;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.label-container {
+    height: 2.96rem;
+    margin: 0 .266666rem;
+}
+
+.label {
+    position: relative;
+    display: block;
+    float: left;
+    width: 20%;
+    height: 20%;
+    padding: 0 calc(10% - .6rem);
+    list-style: none;
+    text-align: center;
+    opacity: .5;
+}
+
+.label > div {
+    overflow: hidden;
+    margin-top: .48rem;
+    border-radius: 100%;
+    background: #00c5d5;
+}
+
+.label img {
+    width: .6rem;
+}
+
+.label-info {
+    position: absolute;
+    bottom: -.773333rem;
+    left: 50%;
+    margin: 0 auto;
+    font-size: .32rem;
+    transform: translateX(-50%);
+}
+
+.column-container {
+    height: 4.266666rem;
+    margin: 0.266666rem;
+    border-top: 2px solid #F4F4F5;
+}
+
+.column {
+    float: left;
+    width: 33.333333%;
+    margin-top: .533333rem;
+    text-align: center;
+}
+
+.column {
+    border-right: 2px solid #F4F4F5;
+}
+
+.column:last-child {
+    border-right: 0;
+}
+
+.column-title {
+    font-size: .426666rem;
+}
+
+.colum-subtitle {
+    font-size: .373333rem;
+}
+
+.column img {
+    width: 1.333333rem;
+}
+
+.artical {
+    /*height: 6.64rem;*/
+    padding: 0 0.266666rem;
+    border-top: 0.346666rem solid #F4F4F5;
+}
+.b-line {
+    border-bottom: 0.346666rem solid #F4F4F5;    
+}
+
+.artical-title {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: 0.466666rem;
+    border-bottom: 0.026666rem solid #F4F4F5;
+    margin-bottom: 0.4rem;
+}
+
+.section {
+    /*margin-bottom: 0.266666rem;*/
+    /*background: yellow;*/
+    overflow: hidden;
+}
+.section p,
+.section img {
+    float:left;
+} 
+
+.section p {
+    font-size: 0.333333rem;
+    width: 3.146666rem;
+    height:1.013333rem;
+    background: #F8F8F8;
+    margin-left:0.266666rem;
+    text-align:center;
+    line-height:1.013333rem;
+    margin-bottom: 0.266666rem;
+}
+.section img {
+    width: 2.4rem;
+    height:2.24rem;
+    border:1px solid #FED286;
+}
+
+.artical-header {
+    padding: 0.266666rem 0.266666rem;
+    border-bottom:2px solid #BBBBBB;
+    overflow: hidden;
+    position: relative;
+}
+
+.artical-header div {
+    float: left;
+    /*width: calc(100% - 2.826666rem);*/
+    /*height: 2rem;*/
+}
+.artical-header img {
+    width: 2.826666rem;
+    overflow: hidden;
+    float: left;
+    margin-right: 0.24rem;
+}
+
+.artical-header h3 {
+    font-weight: normal;
+    display: inline-block;
+    font-size: 0.4rem;
+    display: inline;
+    vertical-align: top;
+    margin-left:0.233333rem;
+}
+.artical-header .sub-time {
+    float: left;
+    position: absolute;
+    bottom:-10px;
+    /*display: inline-block;*/
+    /*clear:both;*/
+    margin-left:0.266666rem;
+    font-size: 0.32rem;
+    color: #BBBBBB;
+    /*clear:both;*/
+    /*vertical-align: middle;*/
+}
+
+.footer {
+    height:1.36rem;
+    background: #F8F8F8;
+}
