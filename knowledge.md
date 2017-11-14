@@ -507,3 +507,66 @@ transform:scale(倍数)
 [zoom和scale的区别](http://www.zhangxinxu.com/wordpress/2015/11/zoom-transform-scale-diff/)
 
 [transform对普通元素的影响](http://www.zhangxinxu.com/wordpress/2015/05/css3-transform-affect/)
+
+##xiaowei_mission_10 任务十：Flexbox 布局练习
+
+[Flex](https://segmentfault.com/a/1190000002910324)
+
+##xiaowei_mission_10 任务十一：移动Web页面布局实践
+
+### meta标签
+
+meta标签的作用是"描述元数据"(metadata 描述"数据的"数据被称为"元数据",例如右击img文件>属性>详细信息中的分辨率)
+
+meta标签格式
+	
+	<meta name="" content="">
+注意:如果定义了name |http-equiv,必须定义content属性.反之,不能定义content
+
+	name="viewport" 定义视口
+	视口指浏览器窗口大小,由浏览器决定.
+	在移动设备中,视口通常比浏览器窗口宽,
+	利如 宽度为414pt设备的视口为960,
+
+常用viewport
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+	width=device-width 视口宽度等于设备实际宽度,可通过document.documentElement.clientWidth获得
+	initial-scale=1.0 设置初始缩放值为1
+	maximum-scale 允许用户缩放值
+
+其他常用标签
+
+	设置字母串格式为UTF-8
+	<meta charset="UTF-8">
+	定义关键词
+	<meta name="keywords" content="xxx">
+	安卓 设置chrome浏览器标签栏颜色
+	<meta name="theme-color" content="#81D2D8">
+	设置dpr(1个CSS像素中有几个真实像素(设备像素).苹果为2,及每个虚拟像素中有4个真实像素)
+	可通过window.devicePixelRatio获取
+	<meta name="flexible" content="initial-dpr=2">
+
+参考
+
+[使用Flexible实现手淘H5页面的终端适配](https://github.com/amfe/article/issues/17)
+
+[元数据 阮一峰](http://www.ruanyifeng.com/blog/2007/03/metadata.html)
+
+### rem
+
+根据html元素font-size计算属性数值
+
+	html{font-size:75px}
+	div{width:1rem}
+	该div宽度为75px
+
+### 移动布局
+
+	1 使用display:inlin-block或display:table代替float
+	2 为<a>添加display:block属性,方便点击
+	3 使用自适应布局,如 100% 1rem
+

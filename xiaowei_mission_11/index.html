@@ -14,7 +14,7 @@
     document.documentElement.firstElementChild.appendChild(cssEl);
 
     function setPxPerRem() {
-        var dpr = 1;
+        var dpr = window.devicePixelRatio;
         var pxPerRem = document.documentElement.clientWidth * dpr / 10;
         // if (pxPerRem >= 75) {
         //  return;
@@ -154,9 +154,9 @@
         <div class="artical-header-2">
             <h3> 这个也是文章标题字号是22的文章标题</h3>
             <div class="gallery">
-                <img src="img/bear-2.png">
-                <img src="img/bear-2.png">
-                <img src="img/bear-2.png">
+                <img src="img/bear-2.png" class="ab">
+                <img src="img/bear-2.png" class="ab">
+                <img src="img/bear-2.png" class="ab">
             </div>
             <span class="sub-time">文章来源 7分钟前</span>
         </div>
