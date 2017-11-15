@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #aaa;
+}
+
+.zxx_show {
+    padding: 20px;
+    background: #f0f3f9;
+    /*color: #aaaaaa;*/
+    font-size: 14px;
+}
+
+.zxx_text {
+    position: absolute;
+    margin: -4px 0 0 -1px;
+    color: #333333;
+}

@@ -21,3 +21,7 @@
 [xiaowei_mission_10](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/xiaowei_mission_10/index.html)
 
 [xiaowei_mission_11](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/xiaowei_mission_11/index.html)
+
+[xiaowei_mission_12](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/xiaowei_mission_12/index.html)
+
+[binbin_01](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_01/index.html)
