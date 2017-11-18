@@ -48,7 +48,7 @@
   var inputBox = document.querySelector('.input-box');
 
   function addLeft() {
-    if (!/^\d+$/.test(inputBox)) {
+    if (!/^\d+$/.test(inputBox.value)) {
       alert('the input must be number');
       inputBox.value = '';
       inputBox.focus();
@@ -62,7 +62,7 @@
   document.querySelector('.add-left').addEventListener('click', addLeft);
 
   function addRight() {
-    if (!/^\d+$/.test(inputBox)) {
+    if (!/^\d+$/.test(inputBox.value)) {
       alert('the input must be number');
       inputBox.value = '';
       inputBox.focus();
