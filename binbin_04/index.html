@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>binbin_04</title>
+    <style type="text/css">
+    button {
+      background: white;
+      border: 1px solid black;
+      border-radius: 6px;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    li {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        background: red;
+        color: white;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        cursor: default;
+    }
+    </style>
+</head>
+
+<body>
+  <div>
+      <input type="text" name="" class="input-box" value="">
+      <button class="add-left ">左侧入</button>
+      <button class="add-right ">右侧入</button>
+      <button class="del-left ">左侧出</button>
+      <button class="del-right ">右侧出</button>
+  </div>
+  <ul class="squre-queue ">
+      <li>1</li>
+      <li>2</li>
+  </ul>
+  <script type="text/javascript ">
+  var squreQueueElement = document.querySelector('.squre-queue');
+  var inputBox = document.querySelector('.input-box');
+
+  function addLeft() {
+    if (!/^\d+$/.test(inputBox)) {
+      alert('the input must be number');
+      inputBox.value = '';
+      inputBox.focus();
+      return;
+    }
+    var liElement = document.createElement('li');
+    liElement.addEventListener('click', delself);
+    liElement.textContent = inputBox.value;
+    squreQueueElement.insertBefore(liElement, squreQueueElement.childNodes[0]);
+  }
+  document.querySelector('.add-left').addEventListener('click', addLeft);
+
+  function addRight() {
+    if (!/^\d+$/.test(inputBox)) {
+      alert('the input must be number');
+      inputBox.value = '';
+      inputBox.focus();
+      return;
+    }
+    var liElement = document.createElement('li');
+    liElement.addEventListener('click', delself);
+    liElement.textContent = inputBox.value;
+    squreQueueElement.appendChild(liElement);
+
+  }
+  document.querySelector('.add-right').addEventListener('click', addRight);
+
+  function delLeft() {
+    var ChildEle = squreQueueElement.querySelectorAll('li');
+    var firstChildEle = ChildEle[0];
+    firstChildEle.parentNode.removeChild(firstChildEle);
+  }
+  document.querySelector('.del-left').addEventListener('click', delLeft);
+
+  function delRight() {
+    var ChildEle = squreQueueElement.querySelectorAll('li');
+    var lastChild = ChildEle[ChildEle.length - 1];
+    lastChild.parentNode.removeChild(lastChild);
+  }
+  document.querySelector('.del-right').addEventListener('click', delRight);
+
+  function delself() {
+    this.parentNode.removeChild(this);
+  }
+  var ChildEle = squreQueueElement.querySelectorAll('li');
+  for (var i =0; i < ChildEle.length; i++){
+    ChildEle[i].addEventListener('click', delself);
+  }
+
+  </script>
+</body>
+
+</html>
