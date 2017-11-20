@@ -11,21 +11,12 @@ function addLeft(side) {
     var liElement = document.createElement('li');
     liElement.addEventListener('click', delself);
     liElement.style.height = inputBox.value + 'px';
-    liElement.textContent = inputBox.value;
     if (side === 'left') {
         squreQueueElement.insertBefore(liElement, squreQueueElement.childNodes[0]);
     } else if (side === 'right') {
         squreQueueElement.appendChild(liElement);
     }
 }
-
-document.querySelector('.add-left').addEventListener('click', (arg) => {
-    return addLeft('left');
-});
-
-document.querySelector('.add-right').addEventListener('click', (arg) => {
-    return addLeft('right');
-});
 
 function delLeft() {
     var ChildEle = squreQueueElement.querySelectorAll('li');
@@ -39,18 +30,10 @@ function delRight() {
     lastChild.parentNode.removeChild(lastChild);
 }
 
-document.querySelector('.del-left').addEventListener('click', delLeft);
-document.querySelector('.del-right').addEventListener('click', delRight);
-
 function delself() {
     this.parentNode.removeChild(this);
 }
-var ChildEle = squreQueueElement.querySelectorAll('li');
-for (var i = 0; i < ChildEle.length; i++) {
-    ChildEle[i].addEventListener('click', delself);
-}
 
-// binbin_05
 
 function randomAddEle() {
     squreQueueElement.innerHTML = '';
@@ -61,8 +44,6 @@ function randomAddEle() {
         squreQueueElement.appendChild(liElement);
     }
 }
-document.querySelector('.random-add').addEventListener('click', randomAddEle);
-randomAddEle();
 
 function bubbleSort() {
     var QueueLength = squreQueueElement.querySelectorAll('li').length;
@@ -79,4 +60,25 @@ function bubbleSort() {
     }
 }
 
-document.querySelector('.bubble-sort').addEventListener('click', bubbleSort);
+function init() {
+    document.querySelector('.add-left').addEventListener('click', (arg) => {
+        return addLeft('left');
+    });
+
+    document.querySelector('.add-right').addEventListener('click', (arg) => {
+        return addLeft('right');
+    });
+
+    document.querySelector('.del-left').addEventListener('click', delLeft);
+    document.querySelector('.del-right').addEventListener('click', delRight);
+    document.querySelector('.random-add').addEventListener('click', randomAddEle);
+    document.querySelector('.bubble-sort').addEventListener('click', bubbleSort);
+
+    var ChildEle = squreQueueElement.querySelectorAll('li');
+    for (var i = 0; i < ChildEle.length; i++) {
+        ChildEle[i].addEventListener('click', delself);
+    }
+}
+
+init();
+randomAddEle();
