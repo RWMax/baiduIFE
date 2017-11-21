@@ -25,3 +25,13 @@
 [xiaowei_mission_12](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/xiaowei_mission_12/index.html)
 
 [binbin_01](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_01/index.html)
+
+[binbin_02](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_02/index.html)
+
+[binbin_03](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_03/index.html)
+
+[binbin_04](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_04/index.html)
+
+[binbin_05](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_05/index.html)
+
+[binbin_06](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_06/index.html)

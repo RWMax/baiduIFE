@@ -47,9 +47,10 @@ function randomAddEle() {
 
 function bubbleSort() {
     var QueueLength = squreQueueElement.querySelectorAll('li').length;
+    var ChildEle = squreQueueElement.getElementsByTagName('li');
     for (var i = 0; i < QueueLength - 1; i++) {
         for (var j = 0; j < QueueLength - 1 - i; j++) {
-            var ChildEle = squreQueueElement.querySelectorAll('li');
+            //var ChildEle = squreQueueElement.querySelectorAll('li');
             var divEleHeight = window.getComputedStyle(ChildEle[j])['height'].match(/\d+/)[0];
             var nexteleHeight = window.getComputedStyle(ChildEle[j + 1])['height'].match(/\d+/)[0];
             if (Number(divEleHeight) > Number(nexteleHeight)) {

@@ -8,7 +8,7 @@ function renderQueue(array = numQueue) {
 
     for (var i = 0; i < array.length; i++) {
         var liEle = document.createElement('li');
-        liEle.style.height = array[i] * 2 + 'px';
+        liEle.style.height = array[i] * 4 + 'px';
         liEle.addEventListener('click', (() => {
             var order = i;
             return () => {
@@ -22,7 +22,7 @@ function renderQueue(array = numQueue) {
     }
 }
 
-function randomArr(num = 50) {
+function randomArr(num = 100) {
     numQueue = [];
     for (var i = 0; i < num; i++) {
         numQueue.push(Math.floor(Math.random() * 90) + 10);
@@ -35,8 +35,8 @@ function insertQueue(position) {
         alert('请输入10-100间的数字');
         return;
     }
-    if (numQueue.length >= 60) {
-        alert('超过60个元素');
+    if (numQueue.length >= 100) {
+        alert('超过100个元素');
         return;
     }
 
@@ -48,6 +48,7 @@ function insertQueue(position) {
 }
 
 var sortStep = [];
+
 function bubbleSort(array = numQueue) {
     for (var i = 0; i < array.length - 1; i++) {
         for (var j = 0; j < array.length - 1 - i; j++) {
@@ -61,23 +62,45 @@ function bubbleSort(array = numQueue) {
     }
 }
 
-function quickSort(array) {
-    if (array.length <= 1) {
-        return array.slice(0);
-    };
-    var mid = [array[0]];
-    var left = [];
-    var right = [];
+// function quickSort(array) {
+//     if (array.length <= 1) {
+//         return array.slice(0);
+//     };
+//     var mid = [array[0]];
+//     var left = [];
+//     var right = [];
 
-    for (var i = 1; i < array.length; i++) {
-        if (array[i] < mid[0]) {
-            left.push(array[i]);
-        } else {
-            right.push(array[i]);
+//     for (var i = 1; i < array.length; i++) {
+//         if (array[i] < mid[0]) {
+//             left.push(array[i]);
+//         } else {
+//             right.push(array[i]);
+//         }
+//     }
+
+//     return quickSort(left).concat(mid.concat(quickSort(right)));
+// }
+
+function quickSort(array, start = 0, end = array.length - 1) {
+    var midIndex = start;
+    for (var i = start + 1; i <= end; i++) {
+        if (array[i] < array[midIndex]) {
+            var temp = array[i];
+            array.splice(i, 1);
+            array.splice(start, 0, temp);
+            midIndex++;
+            sortStep.push(JSON.parse(JSON.stringify(array)));
         }
+
+    }
+    if (start < midIndex - 1) {
+        quickSort(array, start, midIndex - 1)
     }
 
-    return quickSort(left).concat(mid.concat(quickSort(right)));
+    if (end > midIndex - 1) {
+        quickSort(array, midIndex + 1, end)
+    }
+
 }
 
 function sortVisual(sortFuncName, array) {
@@ -87,9 +110,8 @@ function sortVisual(sortFuncName, array) {
             renderQueue(sortStep.shift());
         } else if (sortStep.length = 0) {
             clearInterval(sortAnimation);
-            sortStep = [];
         }
-    }, 10);
+    }, 30);
 }
 
 
@@ -131,8 +153,9 @@ function initInputBox() {
     });
 
     document.querySelector('.quick-sort').addEventListener('click', () => {
-        numQueue = quickSort(numQueue);
-        renderQueue();
+        sortVisual(quickSort, numQueue);
+        // quickSort(numQueue);
+        // renderQueue();
     });
 
     randomArr();
