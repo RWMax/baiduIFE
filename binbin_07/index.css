@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fafafa;
+}
+
+.btn {
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background: white;
+}
+
+.ground {
+    background: white;
+}
+
+.treeNode {
+    display: flex;
+    width: calc(100% - 28px);
+    min-width: 20px;
+    min-height: 100px;
+    margin: 14px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 10px #bbc;
+}
+
+.highlight {
+    animation: changeColor .6s normal;
+}
+
+@keyframes changeColor {
+    0% {
+        background: white;
+    }
+    50% {
+        background: yellow;
+    }
+    100% {
+        background: white;
+    }
+}

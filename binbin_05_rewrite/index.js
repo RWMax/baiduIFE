@@ -56,30 +56,94 @@ function bubbleSort(array = numQueue) {
                 var temp = array[j + 1];
                 array[j + 1] = array[j];
                 array[j] = temp;
+                sortStep.push(JSON.parse(JSON.stringify(array)));
             }
-            sortStep.push(JSON.parse(JSON.stringify(array)));
         }
     }
 }
 
-// function quickSort(array) {
-//     if (array.length <= 1) {
-//         return array.slice(0);
-//     };
-//     var mid = [array[0]];
-//     var left = [];
-//     var right = [];
+function bubbleMarkSort(array = numQueue) {
+    var endIndex = array.length - 1;
 
-//     for (var i = 1; i < array.length; i++) {
-//         if (array[i] < mid[0]) {
-//             left.push(array[i]);
-//         } else {
-//             right.push(array[i]);
-//         }
-//     }
+    while (endIndex > 0) {
+        var lastSwapIndex;
+        for (var i = 0; i < endIndex; i++) {
+            if (array[i] > array[i + 1]) {
+                var temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
+                lastSwapIndex = i;
+                sortStep.push(JSON.parse(JSON.stringify(array)));
+            }
+        }
+        endIndex = lastSwapIndex;
+    }
+}
 
-//     return quickSort(left).concat(mid.concat(quickSort(right)));
-// }
+function bubbleTwoSideSort(array = numQueue) {
+    var start = 0;
+    var end = array.length - 1;
+    while (start < end) {
+        for (var i = start; i < end; i++) {
+            if (array[i] > array[i + 1]) {
+                var temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
+                sortStep.push(JSON.parse(JSON.stringify(array)));
+            }
+        }
+        end--;
+        for (var i = end; i > start; i--) {
+            if (array[i - 1] > array[i]) {
+                var temp = array[i];
+                array[i] = array[i - 1];
+                array[i - 1] = temp;
+                sortStep.push(JSON.parse(JSON.stringify(array)));
+            }
+        }
+        start++;
+    }
+}
+
+//test
+if (false) {
+    var l = [2, 1, 4, 5, 6, 7, 8, 1];
+    bubbleTwoSideSort(l);
+    console.log(l);
+}
+
+
+function selectSort(array) {
+    var endIndex = array.length - 1,
+        minIndex;
+
+    for (var i = 0; i < endIndex; i++) {
+        minIndex = i;
+        for (var j = i + 1; j <= endIndex; j++) {
+            if (array[j] < array[minIndex]) {
+                minIndex = j;
+            }
+
+        }
+        var temp = array[i];
+        array[i] = array[minIndex];
+        array[minIndex] = temp;
+        sortStep.push(JSON.parse(JSON.stringify(array)));
+    }
+}
+
+function insertSort(array) {
+    for (var i = 1; i < array.length; i++) {
+        var j = i - 1;
+        while (j >= 0 && array[i] < array[j]) {
+            j--;
+        }
+        var temp = array[i];
+        array.splice(i, 1);
+        array.splice(j + 1, 0, temp);
+        sortStep.push(JSON.parse(JSON.stringify(array)));
+    }
+}
 
 function quickSort(array, start = 0, end = array.length - 1) {
     var midIndex = start;
@@ -89,10 +153,10 @@ function quickSort(array, start = 0, end = array.length - 1) {
             array.splice(i, 1);
             array.splice(start, 0, temp);
             midIndex++;
-            sortStep.push(JSON.parse(JSON.stringify(array)));
         }
-
+        sortStep.push(JSON.parse(JSON.stringify(array)));
     }
+
     if (start < midIndex - 1) {
         quickSort(array, start, midIndex - 1)
     }
@@ -100,7 +164,6 @@ function quickSort(array, start = 0, end = array.length - 1) {
     if (end > midIndex - 1) {
         quickSort(array, midIndex + 1, end)
     }
-
 }
 
 function sortVisual(sortFuncName, array) {
@@ -111,9 +174,8 @@ function sortVisual(sortFuncName, array) {
         } else if (sortStep.length = 0) {
             clearInterval(sortAnimation);
         }
-    }, 30);
+    }, 10);
 }
-
 
 function initInputBox() {
     inputBoxEle.value = '';
@@ -152,13 +214,27 @@ function initInputBox() {
         sortVisual(bubbleSort, numQueue);
     });
 
+    document.querySelector('.bubble-sort-mark').addEventListener('click', () => {
+        sortVisual(bubbleMarkSort, numQueue);
+    });
+
+    document.querySelector('.bubble-sort-two').addEventListener('click', () => {
+        sortVisual(bubbleTwoSideSort, numQueue);
+    });
+
+    document.querySelector('.select-sort ').addEventListener('click', () => {
+        sortVisual(selectSort, numQueue);
+    });
+
+    document.querySelector('.insert-sort ').addEventListener('click', () => {
+        sortVisual(insertSort, numQueue);
+    });
+
     document.querySelector('.quick-sort').addEventListener('click', () => {
         sortVisual(quickSort, numQueue);
-        // quickSort(numQueue);
-        // renderQueue();
     });
 
     randomArr();
     renderQueue();
-    initInputBox()
+    initInputBox();
 })();
