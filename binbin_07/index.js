@@ -6,7 +6,7 @@ function node(nodeNum) {
     this.nodeElement = null;
 }
 
-function binaryTree(treeHight = 2) {
+function binaryTree(treeHight = 4) {
     var currentNode = new node();
 
     if (treeHight > 0) {
