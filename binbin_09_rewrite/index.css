@@ -25,15 +25,25 @@ body {
 .treeNode {
     position: relative;
     display: flex;
-    width: calc(100% - 28px);
-    min-width: 20px;
-    min-height: 100px;
+    flex-grow: 1;
+    min-height: 200px;
+    max-height:500px;
     margin: 14px;
     border-radius: 8px;
     background: white;
     box-shadow: 0 0 10px #bbc;
+    
 }
 
+.rotation {
+    animation: rotation 2s infinite;
+    max-width: 500px;
+    min-height: 0;
+    color: rgba(0,0,0,0);
+    pointer-events: none;
+    user-select: none;
+
+}
 .data {
     position: absolute;
     top: 0;
@@ -57,5 +67,18 @@ body {
     }
     100% {
         background: white;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }

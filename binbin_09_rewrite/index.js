@@ -92,7 +92,7 @@ Tree.prototype.renderDom = function(traversal) {
     this.contains(callback, this.traverseDF);
 };
 
-function initTree() {
+var initTree = function() {
     var tree = new Tree('0');
     tree.addByData('1-1', '0', tree.traverseDF);
     tree.addByData('1-2', '0', tree.traverseDF);
@@ -107,9 +107,9 @@ function initTree() {
     tree.renderDom(tree.traverseDF);
     document.querySelector('.ground').appendChild(tree._root.element);
     return tree;
-}
+};
 
-function init() {
+var init = function() {
     var tree = initTree();
     var inputBox = document.querySelector('.inputBox');
 
@@ -189,6 +189,49 @@ function init() {
         }, 100);
 
     });
-}
+
+    var magicBtn = document.querySelector('.magic');
+    magicBtn.addEventListener('click', function(){
+        var tree = new Tree('0');
+        tree.addByData('1', '0', tree.traverseDF);
+        tree.addByData('2', '1', tree.traverseDF);
+        tree.addByData('3', '2', tree.traverseDF);
+        tree.addByData('4', '3', tree.traverseDF);
+        tree.addByData('5', '4', tree.traverseDF);
+        tree.addByData('6', '5', tree.traverseDF);
+        tree.addByData('7', '6', tree.traverseDF);
+        tree.addByData('8', '7', tree.traverseDF);
+        tree.addByData('9', '8', tree.traverseDF);
+        tree.addByData('10', '9', tree.traverseDF);
+        tree.addByData('11', '10', tree.traverseDF);
+        tree.addByData('12', '11', tree.traverseDF);
+        tree.addByData('13', '12', tree.traverseDF);
+        tree.addByData('14', '13', tree.traverseDF);
+        tree.addByData('15', '14', tree.traverseDF);
+        tree.addByData('16', '15', tree.traverseDF);
+        tree.addByData('17', '16', tree.traverseDF);
+        tree.addByData('18', '17', tree.traverseDF);
+
+        tree.renderDom(tree.traverseDF);
+        document.querySelector('.ground').innerHTML = '';
+        document.querySelector('.ground').appendChild(tree._root.element);
+
+
+        var queue = [];
+        callback = function(node) {
+            queue.push(node.element);
+        };
+        tree.contains(callback, tree.traverseDF);
+        var timer = setInterval(function(){
+            if (queue.length > 0) {
+                var ele = queue.shift();
+                ele.classList.add('rotation');
+            } else {
+                clearInterval(timer);
+            }
+        },100);
+    });
+
+};
 
 init();

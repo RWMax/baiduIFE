@@ -37,3 +37,7 @@
 [binbin_06](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_06/index.html)
 
 [binbin_07](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_07/index.html)
+
+[binbin_08](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_08/index.html)
+
+[binbin_09](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_09_rewrite/index.html)
