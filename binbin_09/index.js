@@ -1,16 +1,23 @@
 var ground = document.querySelector('.ground');
+var inputBox = document.querySelector('.inputBox');
+var insert = document.querySelector('.insert');
+
+var nodeEleRender = function(data) {
+    var div = document.createElement('div');
+    div.classList.add('treeNode');
+
+    var pEle = document.createElement('p');
+    pEle.classList.add('data');
+    pEle.textContent = data;
+    div.appendChild(pEle);
+    return div;
+};
 
 var Node = function(data) {
     this.data = data;
     this.parent = null;
     this.children = [];
-    this.nodeElement = document.createElement('div');
-    this.nodeElement.classList.add('treeNode');
-    var pEle = document.createElement('p');
-    pEle.classList.add('data');
-    pEle.textContent = data;
-    this.nodeElement.appendChild(pEle);
-
+    this.nodeElement = nodeEleRender(data);
 };
 
 var Tree = function(data) {
@@ -29,7 +36,6 @@ Tree.prototype.traverseDF = function(callback, currentNode) {
 Tree.prototype.traverseDF = function(callback) {
 
     (function recurse(currentNode) {
-        console.log(currentNode.data);
         var length = currentNode.children.length;
         for (var i = 0; i < length; i++) {
             recurse(currentNode.children[i]);
@@ -39,8 +45,7 @@ Tree.prototype.traverseDF = function(callback) {
 
 };
 
-
-Tree.prototype.contains = function(callback, traversal = tree.traverseDF) {
+Tree.prototype.contains = function(callback, traversal) {
     traversal.call(this, callback);
 };
 
@@ -75,7 +80,6 @@ function visual(queue) {
     }, 600);
 }
 
-
 function plantTree() {
     var tree = new Tree('0');
     tree.add('1-1', '0', tree.traverseDF);
@@ -88,15 +92,33 @@ function plantTree() {
     tree.add('2-2', '1-2', tree.traverseDF);
     tree.add('2-1', '1-3', tree.traverseDF);
     tree.add('2-2', '1-3', tree.traverseDF);
-    document.querySelector('.ground').innerHTML = '';
-    document.querySelector('.ground').appendChild(tree._root.nodeElement);
     return tree;
 }
 
+function initTree(tree) {
+    tree.contains(function(node) {
+        node.nodeElement.classList.remove('highlight', 'highlight-always');
+    }, tree.traverseDF);
+    document.querySelector('.ground').innerHTML = '';
+    document.querySelector('.ground').appendChild(tree._root.nodeElement);
+}
+
 function init() {
-    plantTree();
+    var tree = plantTree();
+    document.querySelector('.ground').innerHTML = '';
+    document.querySelector('.ground').appendChild(tree._root.nodeElement);
+
+    tree.contains(function(node) {
+        node.nodeElement.addEventListener('click', function(event) {
+            event.stopPropagation();
+            initTree(tree);
+            selectEled = event;
+            event.target.classList.add('highlight-always');
+        });
+    }, tree.traverseDF);
+
     document.querySelector('.depthSearch').addEventListener('click', function() {
-        var tree = plantTree();
+        initTree(tree);
         var queue = [];
         tree.contains(function(node) {
             queue.push(node.nodeElement);
@@ -105,8 +127,8 @@ function init() {
     });
 
     document.querySelector('.search.btn').addEventListener('click', function() {
-        var tree = plantTree();
-        var data = document.querySelector('.inputBox').value;
+        initTree(tree);
+        var data = inputBox.value;
         var queue = [];
         var find = [];
         tree.contains(function(node) {
@@ -121,32 +143,44 @@ function init() {
             if (find.length === 0) {
                 alert('not find');
             } else {
-                for (var i of find) {
-                    i.classList.add('highlight-always');
+                for (var i = 0; i < find.length; i++) {
+                    find[i].classList.add('highlight-always');
                 }
             }
         }, (queue.length + 1) * 600);
 
     });
+
+    document.querySelector('.insert').addEventListener('click', function() {
+        tree.contains(function(node) {
+            var isfocus = node.nodeElement.classList.contains('highlight-always');
+            if (isfocus) {
+                var child = new Node(inputBox.value);
+                child.parent = node;
+                node.children.push(child);
+                node.nodeElement.appendChild(child.nodeElement);
+                initTree(tree);
+            }
+        }, tree.traverseDF);
+    });
+
+    document.querySelector('.delete').addEventListener('click', function(event) {
+        tree.contains(function(node) {
+            var isfocus = node.nodeElement.classList.contains('highlight-always');
+            if (isfocus) {
+                var parent = node.parent;
+                var index;
+                for (var i=0; i <parent.children.length; i++) {
+                    if (parent.children[i].data === node.data) {
+                        index = i;
+                    }
+                }
+                parent.children.splice(index, 1);
+                parent.nodeElement.removeChild(node.nodeElement);
+                initTree(tree);
+            }
+        }, tree.traverseDF);
+
+    });
 }
 init();
-
-
-
-// var timer = function(callback,queue,delayTime) {
-//     var i = 0;
-//     var t = setInterval(function(){
-//         callback(queue[i]);
-//         i++;
-//         if(i>=queue.length) {
-//             clearInterval(t);
-//         }
-//     }, delayTime);
-// };
-// 
-//test
-// var hellow = function(arg){
-//     console.log('hellow' + arg);
-// };
-
-// timer(hellow, [1,2,3],100)
