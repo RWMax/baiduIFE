@@ -422,18 +422,19 @@ figure::after {
 }
 
 #red-square-aside {
-    margin-left: 18px;
-    margin-top: 12px;
     float: left;
-    width: 164px;
+    width: 160px;
+    margin-top: 26px;
+    margin-left: 18px;
     font-family: SimHei;
     font-size: 14px;
     font-style: oblique;
     text-align: justify;
     color: #5a5b5b;
 }
+
 #red-square-aside p {
-    margin-top:20px;
+    margin-top: 12px;
 }
 
 #red-square-aside span {
@@ -441,6 +442,7 @@ figure::after {
     color: #de5758;
 }
 
+/*
 #mark-top {
     float: left;
     margin-right: 20px;
@@ -452,6 +454,16 @@ figure::after {
     float: right;
     margin-right: -22px;
     margin-top: -30px;
+}*/
+
+.comma-l {
+    float: left;
+    margin-right: 14px;
+}
+
+.comma-r {
+    float: right;
+    margin-top: -28px;
 }
 
 #underline {
