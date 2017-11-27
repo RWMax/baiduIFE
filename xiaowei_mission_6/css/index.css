@@ -371,6 +371,7 @@ figure::after {
 
 #red-square {
     display: table;
+    float: left;
     width: 260px;
     height: 160px;
     margin-top: 20px;
@@ -421,38 +422,36 @@ figure::after {
 }
 
 #red-square-aside {
-    position: absolute;
-    right: 18px;
-    bottom: 0;
+    margin-left: 18px;
+    margin-top: 12px;
+    float: left;
     width: 164px;
-    height: 160px;
     font-family: SimHei;
     font-size: 14px;
     font-style: oblique;
     text-align: justify;
     color: #5a5b5b;
 }
+#red-square-aside p {
+    margin-top:20px;
+}
 
 #red-square-aside span {
-    margin-top: 40px;
-    font-family: SimHei;
     font-size: 70px;
-    line-height: 0;
     color: #de5758;
 }
 
 #mark-top {
     float: left;
-    margin-right: 10px;
-    margin-left: -50px;
+    margin-right: 20px;
+    margin-left: -30px;
+    margin-bottom: -40px;
 }
 
 #mark-bottom {
-    position: relative;
-    top: -40px;
     float: right;
-    margin-right: -20px;
-    vertical-align: top;
+    margin-right: -22px;
+    margin-top: -30px;
 }
 
 #underline {

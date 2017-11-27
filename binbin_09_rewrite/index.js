@@ -84,7 +84,7 @@ Tree.prototype.renderDom = function(traversal) {
         p.innerText = node.data;
         e.appendChild(p);
         //chicked highlight
-        e.addEventListener('click', function() {
+        e.addEventListener('click', function(event) {
             that.initDom(that.traverseDF);
             event.target.classList.add('highlight-always');
         });
