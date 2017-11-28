@@ -2,24 +2,6 @@
 
 ## xiaowei_mission_l 零基础HTML编码
 
-[ul ol](https://www.w3schools.com/html/html_lists.asp)
-
-	<ul style="list-style-type:none;">
-		<li></li>
-	</ul>
-
-	<ol type="A">
-		<li></li>
-	</ol>
-
-	<dl>
-		<dt>名称</dt>
-		<dd>描述</dd>
-	</dl>
-
-	list-style-type:none | disc ...
-	type="1 | a | A" ...
-
 [a](https://www.w3schools.com/html/html_links.asp)
 
 	<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>

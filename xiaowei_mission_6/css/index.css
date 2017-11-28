@@ -177,7 +177,11 @@ figure::after {
 
 #three-w > div {
     float: left;
-    margin-right: 24px;
+    margin-right: 24px; 
+    text-align: justify;
+}
+
+three-w-title {
     text-transform: capitalize;
 }
 
@@ -235,7 +239,7 @@ figure::after {
     width: 415px;
     height: 606px;
     margin-top: 64px;
-    text-transform: uppercase;
+    
 }
 
 #front-technology h2 {
@@ -250,7 +254,12 @@ figure::after {
     font-size: 72px;
     font-style: oblique;
     color: #f5e327;
+    text-transform: uppercase;
 }
+#front-technology h2{
+    text-transform: uppercase;   
+}
+
 
 #front-technology h3 {
     height: 50px;
@@ -264,7 +273,6 @@ figure::after {
 
 #front-technology p {
     margin-top: 24px;
-    font-family: SimSun;
     font-size: 12px;
     line-height: 16px;
     text-align: justify;

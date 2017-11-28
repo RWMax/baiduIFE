@@ -67,12 +67,14 @@ figure img {
 }
 
 #term {
-    margin-right:20px;
+    margin-right: 20px;
 }
 
 #gallery {
-    margin-left:20px;
+    margin-left: 20px;
 }
+
 #introduction {
     overflow: auto;
+    background: white;
 }
