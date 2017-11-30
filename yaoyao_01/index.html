@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>yaoyao_01</title>
+    <style type="text/css">
+    .body {
+        font-size: 14px;
+    }
+
+    .btn {
+        margin-left: 10px;
+        width: 60px;
+        height: 36px;
+        border-radius: 4px;
+        color: white;
+        background: blue;
+        border: 0;
+    }
+
+    .remind {
+        display: block;
+        margin-left: 50px;
+        line-height: 2;
+        color: #aaa;
+        font-size: 12px;
+    }
+
+    .input {
+        margin-left: 10px;
+        height: 30px;
+        width: 200px;
+        border: 2px solid #555;
+        border-radius: 4px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <form class="name" action="#" onsubmit="checkName(this);return false;" method="post">
+        名称
+        <input class="input" type="text">
+        <button class="btn" onclick="">验证</button>
+        <label class="remind">必填,长度为4~16个字符</label>
+    </form>
+    <script>
+    var inputBox = document.getElementsByClassName('input')[0];
+    var remindBoard = document.getElementsByClassName('remind')[0];
+    var checkName = function() {
+        var name = inputBox.value;
+        var regExp = /^[\u4e00-\u9fa5a-zA-Z]{4,16}$/;
+
+        var isStandard = regExp.test(name);
+        if (!name) {
+            remindBoard.innerText = '姓名不能为空';
+            remindBoard.style.color = 'red';
+        } else if (!isStandard) {
+            remindBoard.innerText = "必填,长度为4~16个字符";
+            remindBoard.style.color = 'red';
+        } else {
+            remindBoard.innerText = '名称格式正确';
+            remindBoard.style.color = 'green';
+        }
+    };
+    </script>
+</body>
+
+</html>
