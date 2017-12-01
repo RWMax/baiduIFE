@@ -5,10 +5,29 @@ var emailInput = document.querySelector(".email input");
 var phoneInput = document.querySelector(".phone input");
 var checkBtn = document.querySelector(".check-post");
 
+var strLength = function(str) {
+    var index = -1;
+    var length = 0;
+    while (++index < str.length) {
+        var code = str.charCodeAt(index);
+        if (code >= 0xD800 && code <= 0xDBFF) {
+            length++;
+            index++;
+        } else {
+            length++;
+        }
+    }
+
+    return length;
+};
+
+if (true) {
+    console.log(strLength('𠀀'));
+}
 var nameOnBlur = function() {
     var value = this.value;
     var sidetip = this.nextElementSibling;
-    var length = Array.from(value).length;
+    var length = strLength(value);
     if (!value) {
         sidetip.innerText = '名称不能为空';
         sidetip.style.color = 'red';
@@ -24,7 +43,7 @@ var nameOnBlur = function() {
 var passwordOnBlur = function() {
     var value = this.value;
     var sidetip = this.nextElementSibling;
-    var length = Array.from(value).length;
+    var length = strLength(value);
     if (!value) {
         sidetip.innerText = '密码不能为空';
         sidetip.style.color = 'red';
@@ -52,7 +71,7 @@ var pswConfirmOnBlur = function() {
 var emailOnBlur = function() {
     var value = this.value;
     var sidetip = this.nextElementSibling;
-    var length = Array.from(value).length;
+    var length = strLength(value);
     var emailRegExp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (!value) {
