@@ -1,5 +1,2 @@
-# 百度前端学院
+[preview](mission_preview.md)
 
-[预览](mission_preview.md)
-
-[笔记](knowledge.md)

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>yaoyao_02</title>
+    <style type="text/css">
+    .signup {
+        margin: 20px auto;
+        width: 300px;
+        overflow: auto;
+        font-size: 14px;
+    }
+
+    .prompt {
+        vertical-align: top;
+        height: 70px;
+    }
+
+    .prompt .itemname {
+        margin-top: 6px;
+        text-align: right;
+        vertical-align: top;
+        display: inline-block;
+        width: 70px;
+    }
+
+    .prompt .field {
+        display: inline-block;
+        width: 200px;
+    }
+
+    .prompt input {
+        width: 220px;
+        height: 30px;
+
+        border: 2px solid #aaa;
+        border-radius: 4px;
+    }
+
+    .prompt label {
+        display: none;
+        color: #aaa;
+        font-size: 12px;
+    }
+
+    .btn {
+        margin-left: 238px;
+        width: 60px;
+        height: 36px;
+        border: 0;
+        border-radius: 4px;
+        color: white;
+        background: blue;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="signup">
+        <div class="prompt name">
+            <span class="itemname">名称</span>
+            <div class="field">
+                <input class="" type="text">
+                <label class="sidetip">必填,长度为4~16个字符</label>
+            </div>
+        </div>
+        <div class="prompt password">
+            <span class="itemname">密码</span>
+            <div class="field">
+                <input class="" type="text">
+                <label class="sidetip">必填,长度为4~16个字符</label>
+            </div>
+        </div>
+        <div class="prompt password-confirm">
+            <span class="itemname">密码确认</span>
+            <div class="field">
+                <input class="" type="text">
+                <label class="sidetip">再次输入相同密码</label>
+            </div>
+        </div>
+        <div class="prompt email">
+            <span class="itemname">邮箱</span>
+            <div class="field">
+                <input class="" type="email">
+                <label class="sidetip">请输入正确的邮箱格式</label>
+            </div>
+        </div>
+        <div class="prompt phone">
+            <span class="itemname">手机</span>
+            <div class="field">
+                <input class="" type="text">
+                <label class="sidetip">请输入正确的手机号码</label>
+            </div>
+        </div>
+        <button class="btn check-post">提交</button>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
