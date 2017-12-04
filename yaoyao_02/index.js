@@ -17,13 +17,9 @@ var strLength = function(str) {
             length++;
         }
     }
-
     return length;
 };
 
-if (true) {
-    console.log(strLength('𠀀'));
-}
 var nameOnBlur = function() {
     var value = this.value;
     var sidetip = this.nextElementSibling;

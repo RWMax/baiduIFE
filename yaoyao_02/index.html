@@ -7,45 +7,45 @@
     <style type="text/css">
     .signup {
         margin: 20px auto;
-        width: 300px;
-        overflow: auto;
+        width: 350px;
         font-size: 14px;
+        box-sizing: border-box;
+        padding: 20px 40px;
+        text-align:right;
     }
 
     .prompt {
         vertical-align: top;
-        height: 70px;
+        height: 70px;  
     }
 
     .prompt .itemname {
-        margin-top: 6px;
-        text-align: right;
-        vertical-align: top;
+        margin-top: 10px;
         display: inline-block;
-        width: 70px;
+        vertical-align: top;
     }
 
     .prompt .field {
         display: inline-block;
         width: 200px;
+        text-align: left;
     }
 
     .prompt input {
-        width: 220px;
+        width: 100%;
         height: 30px;
-
         border: 2px solid #aaa;
         border-radius: 4px;
+
     }
 
     .prompt label {
-        display: none;
+        display:none;
         color: #aaa;
         font-size: 12px;
     }
 
     .btn {
-        margin-left: 238px;
         width: 60px;
         height: 36px;
         border: 0;
@@ -68,14 +68,14 @@
         <div class="prompt password">
             <span class="itemname">密码</span>
             <div class="field">
-                <input class="" type="text">
+                <input class="" type="password">
                 <label class="sidetip">必填,长度为4~16个字符</label>
             </div>
         </div>
         <div class="prompt password-confirm">
             <span class="itemname">密码确认</span>
             <div class="field">
-                <input class="" type="text">
+                <input class="" type="password">
                 <label class="sidetip">再次输入相同密码</label>
             </div>
         </div>
