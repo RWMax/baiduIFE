@@ -43,3 +43,7 @@
 [binbin_09](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/binbin_09_rewrite/index.html)
 
 [yaoayao_01](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/yaoayao_01/index.html)
+
+[yaoayao_02](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/yaoayao_02/index.html)
+
+[yaoayao_03](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/yaoayao_03/index.html)

@@ -20,6 +20,20 @@ Tree.prototype.traverseDF = function(callback) {
     })(this._root);
 };
 
+
+Tree.prototype.traverseBF = function(callback) {
+    var queue = [];
+    queue.push(this._root);
+    currentNode = queue.shift();
+    while (currentNode) {
+        for (var i = 0; i < currentNode.children.length; i++) {
+            queue.push(currentNode.children[i]);
+        }
+        callback(currentNode);
+        currentNode = queue.shift();
+    }
+};
+
 Tree.prototype.contains = function(callback, traversal) {
     traversal.call(this, callback);
 };
@@ -123,8 +137,9 @@ var init = function() {
             }
         };
         tree.contains(callback, tree.traverseDF);
-
-        if (focus) {
+        // tree.traverseDF(callback);
+        // if (focus) {
+        if (toNode) {
             var data = inputBox.value;
             tree.addByNode(data, toNode, tree.traverseDF);
         }
@@ -158,10 +173,31 @@ var init = function() {
                 var ele = queue.shift();
                 ele.classList.add('highlight');
             } else {
+                // initial dom
                 tree.initDom(tree.traverseDF);
                 clearInterval(timer);
             }
-        }, 100);
+        }, 500);
+    });
+
+    var bfSearchBtn = document.querySelector('.breadthSearch');
+    bfSearchBtn.addEventListener('click', function() {
+        var queue = [];
+        var callback = function(node) {
+            queue.push(node.element);
+        };
+        tree.contains(callback, tree.traverseBF);
+
+        var timer = setInterval(function() {
+            if (queue.length > 0) {
+                var ele = queue.shift();
+                ele.classList.add('highlight');
+            } else {
+                // initial dom
+                tree.initDom(tree.traverseDF);
+                clearInterval(timer);
+            }
+        }, 500);
     });
 
     var searchBtn = document.querySelector('.search');
@@ -191,7 +227,7 @@ var init = function() {
     });
 
     var magicBtn = document.querySelector('.magic');
-    magicBtn.addEventListener('click', function(){
+    magicBtn.addEventListener('click', function() {
         var tree = new Tree('0');
         tree.addByData('1', '0', tree.traverseDF);
         tree.addByData('2', '1', tree.traverseDF);
@@ -222,14 +258,14 @@ var init = function() {
             queue.push(node.element);
         };
         tree.contains(callback, tree.traverseDF);
-        var timer = setInterval(function(){
+        var timer = setInterval(function() {
             if (queue.length > 0) {
                 var ele = queue.shift();
                 ele.classList.add('rotation');
             } else {
                 clearInterval(timer);
             }
-        },100);
+        }, 100);
     });
 
 };

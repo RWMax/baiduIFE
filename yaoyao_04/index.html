@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>yaoyao_04</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .board {
+        /*width: 502px;*/
+        /*height: 502px;*/
+        box-sizing: border-box;
+        position: relative;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    .board table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        background: yellow;
+    }
+
+    .board td {
+        width: 50px;
+        height: 50px;
+        border: 2px solid;
+        box-sizing: border-box;
+    }
+
+    .hor {
+        width: 500px;
+        height: 50px;
+        position: absolute;
+        top: -50px;
+        line-height: 50px;
+        word-spacing: 36px;
+        padding-left: 20px;
+    }
+
+    .ver {
+        position: absolute;
+        width: 50px;
+        height: 500px;
+        left: -50px;
+        line-height: 50px;
+        word-spacing: 50px;
+        text-align: center;
+    }
+    .hor span {
+        margin-left: -4px;
+    }
+    #square {
+        width: 48px;
+        height: 38px;
+        position: absolute;
+        background: red;
+        top: 2px;
+        left: 2px;
+        border-top: 10px solid blue;
+        transition-duration: 0.5s;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="board">
+        <div id="square"></div>
+        <div class="sign hor">1 2 3 4 5 6 7 8 9 <span>10</span></div>
+        <div class="sign ver">1 2 3 4 5 6 7 8 9 10</div>
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <!-- chess board end -->
+    <div class="controlBox">
+        <button id="turn-left">turn left</button>
+        <button id="turn-right">turn right</button>
+        <button id="turn-back">turn back</button>
+        <button id="move">go</button>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
