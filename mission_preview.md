@@ -57,3 +57,7 @@
 [webgl_04 照相机和交互控制](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/webgl_04/index.html)
 
 [webgl_05 动画](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/webgl_05/index.html)
+
+[webgl_06 外部模型 obj mtl](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/webgl_06/loader_obj_mtl/index.html)
+
+[webgl_06 外部模型 pmd pmx vmd](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/webgl_06/loader_pmd_pmx_vmd/index.html)

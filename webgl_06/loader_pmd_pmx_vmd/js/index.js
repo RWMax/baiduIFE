@@ -6,6 +6,7 @@ var main = {
         });
         this.renderer.setClearColor('#FFF6EF');
         this.renderer.setSize(window.innerWidth,window.innerHeight);
+        this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.shadowMap.enabled = true;
         this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
         this.canvas = this.renderer.domElement;
@@ -35,7 +36,7 @@ var main = {
         this.animation();
     },
     animation:function(){
-        if (this.ready && this.mmdHelper) {
+        if (this.ready) { // && this.mmdHelper
             this.mmdHelper.animate(this.clock.getDelta());
         }
         this.camera.lookAt(0, 16, 0);
@@ -68,35 +69,54 @@ var main = {
         var vmdFile = [
             'model/vmd/Ririri.vmd'
         ];
+        
         var audioParams = { delayTime: 0};
+
+        start = new Date().getTime();
+        _this.model = null;
+        _this.audio  = null;
+        _this.listener = null;
+
+        Pace.start();
         mmdLoader.load(mmdFile, vmdFile,function(object){
-            _this.ia = object;
-            object.castShadow = true;
-            object.position.y = 2;
-            
-            mmdHelper.setPhysics( object );
+            _this.model = object;
+            _callback();
+        });      
+        mmdLoader.loadAudio( AudioFile, function (audio, listener) {
+            _this.audio = audio;
+            _this.listener = listener;
+            _callback();
+        });
+        function _callback(){
+            if (!_this.model || !_this.audio || !_this.listener) {
+                return;
+            }
+            _this.model.position.y = 2;
+            mmdHelper.add(_this.model);
+            mmdHelper.setAnimation(_this.model);
+            mmdHelper.setPhysics(_this.model);
+            // add music
+            mmdHelper.setAudio(_this.audio, _this.listener, audioParams);
+            mmdHelper.unifyAnimationDuration();
+            _this.listener.position.z = 1;
+            _this.scene.add(_this.model, _this.audio, _this.listener);
+            _this.ready = true;
             _this.mmdHelper = mmdHelper;
-            mmdHelper.add(object);
-            mmdHelper.setAnimation(object);
-            mmdLoader.loadAudio( AudioFile, function (audio, listener) {
-                listener.position.z = 1;
-                mmdHelper.setAudio(audio, listener, audioParams);
-                mmdHelper.unifyAnimationDuration();
-                _this.ready = true;
-                _this.scene.add(object, listener,audio);
-            });
-            //CCDIKHelper
-            // ikHelper = new THREE.CCDIKHelper(object);
+            console.log(new Date().getTime() - start);
+            Pace.stop();
+            // CCDIKHelper
+            // ikHelper = new THREE.CCDIKHelper(_this.model);
             // ikHelper.visible = true;
             // _this.scene.add(ikHelper);
             // _this.ikHelper = ikHelper;
 
-            //MMDPhysicsHelper
-            // physicsHelper = new THREE.MMDPhysicsHelper(object);
+            // MMDPhysicsHelper
+            // physicsHelper = new THREE.MMDPhysicsHelper(_this.model);
             // physicsHelper.visible = false;
             // _this.scene.add(physicsHelper);
-            // _this.physicsHelper = physicsHelper;         
-        });
+            // _this.physicsHelper = physicsHelper; 
+        };
+
     },
 };
 
