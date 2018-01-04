@@ -3,18 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script>
-        paceOptions = {
-            initialRate:0.03,
-            maxProgressPerFrame:1,
-            minTime: 30000,
-            ghostTime: 120000,
-            restartOnRequestAfter: false
-        };
-    </script>
-    <script src="js/pace.js"></script>
-    <link href="css/pace-theme-center-circle.css" rel="stylesheet" />
-
     <script type="text/javascript" src="js/three.js"></script>
     <script type="text/javascript" src="js/OrbitControls.js"></script>
     <script src="js/mmd/mmdparser.min.js"></script>
@@ -29,10 +17,38 @@
             padding: 0;
             overflow: hidden;
         }
+        .progressbar {
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            border-radius: 80px;
+            text-align: center;
+            font-size: 30px;
+            font-family: "Helvetica Neue", sans-serif;
+            background: #F9B1AB;
+            color: #fff;
+            margin: auto 0;
+            transform: translate(-50%, -50%);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            display: block;
+            animation: rotation linear infinite 5s;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
     </style>
 </head>
 <body>
- 
+    <div class="progressbar">100%</div>
     <script type="text/javascript" src="js/index.js"></script>   
 </body>
 </html>

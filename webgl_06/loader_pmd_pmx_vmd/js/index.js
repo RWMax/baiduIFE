@@ -29,6 +29,7 @@ var main = {
         this.camera.position.set(0, 18, 13);
 
         this.control = new THREE.OrbitControls(this.camera); 
+        this.control.enabled = false;
         this.clock = new THREE.Clock();
         this.scene.add(this.camera,  this.amblight,this.spotlight2,this.spotlight,);
         this.addMmdModer();
@@ -65,7 +66,6 @@ var main = {
         var mmdHelper = new THREE.MMDHelper();
         var mmdFile = 'model/kizunaai/kizunaai.pmx';
         var AudioFile = 'mp3/Ririri.mp3';
-        // 动作文件
         var vmdFile = [
             'model/vmd/Ririri.vmd'
         ];
@@ -77,7 +77,7 @@ var main = {
         _this.audio  = null;
         _this.listener = null;
 
-        Pace.start();
+        var progressbar = document.querySelector('.progressbar');
         mmdLoader.load(mmdFile, vmdFile,function(object){
             _this.model = object;
             _callback();
@@ -86,7 +86,11 @@ var main = {
             _this.audio = audio;
             _this.listener = listener;
             _callback();
+        },function(object){
+            var num = Math.round(object.loaded / object.total * 100, 2);
+            progressbar.innerText = num  + '%';
         });
+
         function _callback(){
             if (!_this.model || !_this.audio || !_this.listener) {
                 return;
@@ -102,8 +106,9 @@ var main = {
             _this.scene.add(_this.model, _this.audio, _this.listener);
             _this.ready = true;
             _this.mmdHelper = mmdHelper;
+            _this.control.enabled = true;
             console.log(new Date().getTime() - start);
-            Pace.stop();
+            progressbar.style.display = 'none';
             // CCDIKHelper
             // ikHelper = new THREE.CCDIKHelper(_this.model);
             // ikHelper.visible = true;
@@ -116,7 +121,6 @@ var main = {
             // _this.scene.add(physicsHelper);
             // _this.physicsHelper = physicsHelper; 
         };
-
     },
 };
 
