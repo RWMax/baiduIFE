@@ -57,6 +57,7 @@ var main = {
     addTreeMod: function(){
         _this = this;
         var mtlLoader = new THREE.MTLLoader();
+        mtlLoader.setCrossOrigin(true); 
         var objLoader = new THREE.OBJLoader();
         mtlLoader.load('model/tree/materials.mtl', function(material){
             objLoader.load('model/tree/model.obj',function(object){

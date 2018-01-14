@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/three.js"></script>
+    <script type="text/javascript" src="js/OrbitControls.js"></script>
+    <script type="text/javascript" src="js/TeapotBufferGeometry.js"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+    <script id="vs" type="x-shader/x-vertex">
+        uniform vec3 ulight;
+        varying float vdot;
+        void main() {
+            vec3 normal =  normalize(normalMatrix * normal);
+            vec4 viewLight = normalize(viewMatrix * vec4(ulight, 1.0));
+            vdot = dot(normal.xyz,viewLight.xyz);
+
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }    
+    </script>
+    <script id="fs" type="x-shader/x-fragment">
+        uniform vec3 ucolor;
+        varying float vdot;
+        float diffuse;
+
+        void main() {
+            if (vdot > 0.8) {
+                diffuse = 1.0;
+            } else if (vdot > 0.6) {
+                diffuse = 0.8;
+            } else if (vdot > 0.4) {
+                diffuse = 0.6;
+            } else {
+                diffuse = 0.4;
+            }
+            gl_FragColor = vec4(ucolor * diffuse, 1.0);
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript" src="js/index.js"></script>   
+</body>
+</html>
