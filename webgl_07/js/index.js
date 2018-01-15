@@ -43,9 +43,6 @@ var main = {
         requestAnimationFrame(this.animation.bind(this));
         this.renderer.render(this.scene, this.camera);
     },
-    getMouseSite: function() {
-
-    },
     render: function() {
         this.spotLightHelper.update();
         this.renderer.render(this.scene, this.camera);
