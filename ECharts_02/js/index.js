@@ -1,37 +1,30 @@
-
 var myChart = echarts.init(document.getElementById('main'));
-baseDate = +new Date('2014.1.1');
-oneDay = 24 * 60 * 60 * 1000;
-
-dateArr = [];
-for (var i = 1; i <= 20; i++){
-    date =  new Date(baseDate + oneDay * i);
-    dateStr = [date.getMonth() + 1, date.getDate()].join('/');
-    dateArr.push(dateStr);
-}
 
 function randomArr() {
     dataArr = [];
     for (var i = 0; i < 10; i++){
-        var num = Math.random() * 4;
+        var num = Math.random() * (3.5 - 0.5) + 0.5;
         dataArr.push(num);
     }
     return dataArr;   
 }
 
-
 var option = {
     title: {
-        itemGap: 16,
         top: 30,
         left: 40,
+        itemGap: 16,
         text: "what's my credit score?",
         subtext: 'Puerto Rico, % decrease on a year earlier',
         textStyle: {
-            fontSize: 24,
+            fontSize: 30,
             fontWeight: 700,
             color: '#24262A',
-        }
+        },
+        subtextStyle: {
+            fontSize: 20,
+            color: '#00000A',
+        },
     },
     grid: {
         y: 165,
@@ -43,18 +36,20 @@ var option = {
         itemWidth: 36,
         itemHeight: 20,
         borderRadius: 0,
-        data:['Population', 'GDP'],
         textStyle: {
             fontSize: 20,
         },
+        data:['Population', 'GDP'],
     },
 
     xAxis: [{ 
-        
-        data: [2006, 07, 08, 09, 10, 11, 12, 13, 14, 15],
         axisTick: {
             inside: true,
             alignWithLabel: true,
+            length: 8,
+            lineStyle: {
+                width: 2,
+            },      
         },
         axisLabel: {
             fontSize: 20,
@@ -62,10 +57,10 @@ var option = {
         axisLine:{
             onZero:false, 
             lineStyle: {
-                width: 2
-
+                width: 2,
             },
         },
+        data: [2006, 07, 08, 09, 10, 11, 12, 13, 14, 15],
     },{
         axisLine:{
             lineStyle:{
@@ -77,6 +72,9 @@ var option = {
     yAxis: {
         type: 'value',
         position: 'right',
+        max: 4,
+        min: 0,
+        inverse: true,
         axisTick: {
             // length: 7,
             // lineStyle: {
@@ -85,21 +83,19 @@ var option = {
             // color: '#fff',
             show: false, 
         },
+        axisLine: {
+            show: false,
+        },
         axisLabel:{
             fontSize: 20,
         },
         splitLine: {
             lineStyle: {
                 color: '#ffffff',
+                width: 2,
             },
         },
-        max: 4,
-        min: 0,
-        inverse: true,
-        axisLine: {
-            show: false,
-        },
-        //data: [0, 1, 2, 3, 4],
+
     },
     backgroundColor: '#C9DCE6',
     textStyle: {
@@ -108,6 +104,8 @@ var option = {
     series: [{
         name: 'Population',
         type: 'bar',
+        barGap: 0,
+        barWidth: 14,
         itemStyle: {  
             normal: {
                 color: '#004F6A',
@@ -118,6 +116,8 @@ var option = {
     {
         name: 'GDP',
         type: 'bar',
+        barGap: 0,
+        barWidth: 14,
         itemStyle: {
             normal: {
                 color: '#009DDA',
