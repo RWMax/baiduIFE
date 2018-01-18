@@ -48,7 +48,7 @@
 
 [yaoayao_03](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/yaoyao_03/index.html)
 
-[yaoayao_03](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/yaoyao_04/index.html)
+[yaoayao_04](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/yaoyao_04/index.html)
 
 [webgl_01 Three.js 入门](http://htmlpreview.github.com/?https://github.com/Aaron-Bird/baiduIFE/blob/master/webgl_01/index.html)
 
