@@ -1,0 +1,4 @@
+# ignore npm package
+node_modules/
+.babelrc
+package-lock.json
